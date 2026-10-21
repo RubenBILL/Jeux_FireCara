@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://btqmtw8fbyabk"]
 
 [ext_resource type="Script" uid="uid://dd73red4nrx77" path="res://player.gd" id="1_4flbx"]
+[ext_resource type="PackedScene" path="res://Poudre.tscn" id="2_i3pqv"]
 [ext_resource type="PackedScene" uid="uid://csq78dkd2bheu" path="res://extincteur/Fire Extinguisher by dook - LtrzDvRya9.glb" id="2_onrkg"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_4ptq1"]
@@ -20,18 +21,6 @@ shape = SubResource("CapsuleShape3D_4ptq1")
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=9403960]
 mesh = SubResource("CapsuleMesh_4ptq1")
 
-[node name="FmodBankLoader" type="FmodBankLoader" parent="." unique_id=911538713]
-bank_paths = ["res://FMOD Banks/Desktop/Master.bank"]
-
-[node name="FmodEventEmitter3D" type="FmodEventEmitter3D" parent="." unique_id=931037503]
-event_name = "event:/Footsteps"
-event_guid = "{40522ecf-7ac2-4694-8add-d337378c89f4}"
-fmod_parameters/CharacterWalk/id = 2316256225252401811
-fmod_parameters/CharacterWalk = "CharacterFly"
-fmod_parameters/CharacterWalk/labels = PackedStringArray("CharacterFly", "CharacterWalk")
-fmod_parameters/CharacterWalk/variant_type = 4
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.76743305, 0)
-
 [node name="Head" type="Node3D" parent="." unique_id=527671526]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6799792, 0)
 
@@ -42,5 +31,22 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.005389929, 0)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
 current = true
 
+[node name="Poudre" parent="Head/Camera3D" unique_id=1253191151 instance=ExtResource("2_i3pqv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.51986694, -0.44235772, -0.98241735)
+
 [node name="Fire Extinguisher by dook - LtrzDvRya9" parent="Head/Camera3D" unique_id=2012338469 instance=ExtResource("2_onrkg")]
 transform = Transform3D(0.14762712, 0, 0, 0, 0.14762712, 0, 0, 0, 0.14762712, 0.50926423, -1.0468855, -0.7124059)
+
+[node name="SonPoudre" type="FmodEventEmitter3D" parent="Head/Camera3D" unique_id=1711165083]
+event_name = "event:/extinct"
+event_guid = "{7658f002-e4e2-4ff9-8738-3dfadfa68eef}"
+volume = 0.09
+
+[node name="FmodEventEmitter3D" type="FmodEventEmitter3D" parent="." unique_id=850325404]
+event_name = "event:/footsteps"
+event_guid = "{2f0bc5d1-6620-48d5-a360-e9841fb939de}"
+volume = 0.3
+fmod_parameters/pas/id = 1937817998102140828
+fmod_parameters/pas = "plancher"
+fmod_parameters/pas/labels = PackedStringArray("plancher", "herbeMarche", "herbeCours")
+fmod_parameters/pas/variant_type = 4
