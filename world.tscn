@@ -1,0 +1,95 @@
+[gd_scene format=3 uid="uid://chsxlf85sd2em"]
+
+[ext_resource type="PackedScene" uid="uid://btqmtw8fbyabk" path="res://player.tscn" id="1_f3sb7"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_0ntl1"]
+size = Vector2(25, 25)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_yyc5p"]
+size = Vector3(25, 0.1, 25)
+
+[sub_resource type="Gradient" id="Gradient_f3sb7"]
+offsets = PackedFloat32Array(0.2, 1)
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_fj7yv"]
+noise_type = 2
+frequency = 0.03
+cellular_jitter = 3.0
+cellular_return_type = 0
+domain_warp_enabled = true
+domain_warp_type = 1
+domain_warp_amplitude = 50.0
+domain_warp_fractal_type = 2
+domain_warp_fractal_lacunarity = 1.5
+domain_warp_fractal_gain = 1.0
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_tlwt5"]
+noise = SubResource("FastNoiseLite_fj7yv")
+color_ramp = SubResource("Gradient_f3sb7")
+seamless = true
+
+[sub_resource type="Terrain3DMaterial" id="Terrain3DMaterial_aqk2v"]
+_shader_parameters = {
+&"bias_distance": null,
+&"blend_sharpness": null,
+&"depth_blur": null,
+&"enable_macro_variation": null,
+&"enable_projection": null,
+&"flat_terrain_normals": null,
+&"macro_variation1": null,
+&"macro_variation2": null,
+&"macro_variation_slope": null,
+&"mipmap_bias": null,
+&"noise1_angle": null,
+&"noise1_offset": null,
+&"noise1_scale": null,
+&"noise2_scale": null,
+&"noise_texture": SubResource("NoiseTexture2D_tlwt5"),
+&"projection_threshold": null
+}
+show_checkered = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_036b0"]
+transparency = 4
+cull_mode = 2
+vertex_color_use_as_albedo = true
+backlight_enabled = true
+backlight = Color(0.5, 0.5, 0.5, 1)
+distance_fade_mode = 1
+distance_fade_min_distance = 128.0
+distance_fade_max_distance = 96.0
+
+[sub_resource type="Terrain3DMeshAsset" id="Terrain3DMeshAsset_dwbse"]
+generated_type = 1
+height_offset = 0.5
+material_override = SubResource("StandardMaterial3D_036b0")
+last_lod = 0
+last_shadow_lod = 0
+lod0_range = 128.0
+
+[sub_resource type="Terrain3DAssets" id="Terrain3DAssets_pkg7o"]
+mesh_list = Array[Terrain3DMeshAsset]([SubResource("Terrain3DMeshAsset_dwbse")])
+
+[node name="World" type="Node3D" unique_id=101567870]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1472432551]
+mesh = SubResource("PlaneMesh_0ntl1")
+
+[node name="Player" parent="." unique_id=554535433 instance=ExtResource("1_f3sb7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.0508728, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=374860432]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=1209602979]
+shape = SubResource("BoxShape3D_yyc5p")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1222243649]
+transform = Transform3D(1, 0, 0, 0, 0.8439969, 0.5363481, 0, -0.5363481, 0.8439969, 0, 0, 0)
+
+[node name="Terrain3D" type="Terrain3D" parent="." unique_id=798168302]
+material = SubResource("Terrain3DMaterial_aqk2v")
+assets = SubResource("Terrain3DAssets_pkg7o")
+show_checkered = true
+top_level = true
+metadata/_edit_lock_ = true

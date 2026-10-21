@@ -1,0 +1,2150 @@
+[gd_scene format=3]
+
+[ext_resource type="ArrayMesh" path="res://map_foret_relief/terrain_mesh.res" id="terrain_mesh"]
+[ext_resource type="Shape3D" path="res://map_foret_relief/terrain_shape.res" id="terrain_shape"]
+[ext_resource type="Material" path="res://Texture_herbe/Ground068_1K-JPG.tres" id="mat_sol"]
+
+[sub_resource type="StandardMaterial3D" id="mat_roche1"]
+albedo_color = Color(0.36, 0.33, 0.3, 1)
+roughness = 1.0
+
+[sub_resource type="StandardMaterial3D" id="mat_roche2"]
+albedo_color = Color(0.3, 0.28, 0.26, 1)
+roughness = 1.0
+
+[sub_resource type="StandardMaterial3D" id="mat_roche3"]
+albedo_color = Color(0.42, 0.38, 0.33, 1)
+roughness = 1.0
+
+[sub_resource type="BoxShape3D" id="shape_mur_ns"]
+size = Vector3(405.60, 196.00, 7.80)
+
+[sub_resource type="BoxShape3D" id="shape_mur_eo"]
+size = Vector3(7.80, 196.00, 390.00)
+
+[sub_resource type="BoxMesh" id="mesh_b1"]
+material = SubResource("mat_roche3")
+size = Vector3(40.15, 79.99, 17.36)
+
+[sub_resource type="BoxShape3D" id="shape_b1"]
+size = Vector3(40.15, 79.99, 17.36)
+
+[sub_resource type="BoxMesh" id="mesh_b2"]
+material = SubResource("mat_roche1")
+size = Vector3(38.45, 70.91, 16.61)
+
+[sub_resource type="BoxShape3D" id="shape_b2"]
+size = Vector3(38.45, 70.91, 16.61)
+
+[sub_resource type="BoxMesh" id="mesh_b3"]
+material = SubResource("mat_roche1")
+size = Vector3(44.94, 57.01, 22.42)
+
+[sub_resource type="BoxShape3D" id="shape_b3"]
+size = Vector3(44.94, 57.01, 22.42)
+
+[sub_resource type="BoxMesh" id="mesh_b4"]
+material = SubResource("mat_roche3")
+size = Vector3(39.62, 59.19, 17.29)
+
+[sub_resource type="BoxShape3D" id="shape_b4"]
+size = Vector3(39.62, 59.19, 17.29)
+
+[sub_resource type="BoxMesh" id="mesh_b5"]
+material = SubResource("mat_roche2")
+size = Vector3(38.03, 82.37, 16.74)
+
+[sub_resource type="BoxShape3D" id="shape_b5"]
+size = Vector3(38.03, 82.37, 16.74)
+
+[sub_resource type="BoxMesh" id="mesh_b6"]
+material = SubResource("mat_roche2")
+size = Vector3(42.36, 68.70, 26.40)
+
+[sub_resource type="BoxShape3D" id="shape_b6"]
+size = Vector3(42.36, 68.70, 26.40)
+
+[sub_resource type="BoxMesh" id="mesh_b7"]
+material = SubResource("mat_roche2")
+size = Vector3(43.29, 83.05, 25.84)
+
+[sub_resource type="BoxShape3D" id="shape_b7"]
+size = Vector3(43.29, 83.05, 25.84)
+
+[sub_resource type="BoxMesh" id="mesh_b8"]
+material = SubResource("mat_roche2")
+size = Vector3(37.47, 56.13, 21.32)
+
+[sub_resource type="BoxShape3D" id="shape_b8"]
+size = Vector3(37.47, 56.13, 21.32)
+
+[sub_resource type="BoxMesh" id="mesh_b9"]
+material = SubResource("mat_roche3")
+size = Vector3(40.41, 73.97, 19.70)
+
+[sub_resource type="BoxShape3D" id="shape_b9"]
+size = Vector3(40.41, 73.97, 19.70)
+
+[sub_resource type="BoxMesh" id="mesh_b10"]
+material = SubResource("mat_roche2")
+size = Vector3(45.46, 81.96, 16.31)
+
+[sub_resource type="BoxShape3D" id="shape_b10"]
+size = Vector3(45.46, 81.96, 16.31)
+
+[sub_resource type="BoxMesh" id="mesh_b11"]
+material = SubResource("mat_roche2")
+size = Vector3(48.94, 91.29, 19.66)
+
+[sub_resource type="BoxShape3D" id="shape_b11"]
+size = Vector3(48.94, 91.29, 19.66)
+
+[sub_resource type="BoxMesh" id="mesh_b12"]
+material = SubResource("mat_roche1")
+size = Vector3(37.12, 69.85, 18.50)
+
+[sub_resource type="BoxShape3D" id="shape_b12"]
+size = Vector3(37.12, 69.85, 18.50)
+
+[sub_resource type="BoxMesh" id="mesh_b13"]
+material = SubResource("mat_roche1")
+size = Vector3(47.88, 65.46, 25.71)
+
+[sub_resource type="BoxShape3D" id="shape_b13"]
+size = Vector3(47.88, 65.46, 25.71)
+
+[sub_resource type="BoxMesh" id="mesh_b14"]
+material = SubResource("mat_roche1")
+size = Vector3(36.39, 80.28, 17.37)
+
+[sub_resource type="BoxShape3D" id="shape_b14"]
+size = Vector3(36.39, 80.28, 17.37)
+
+[sub_resource type="BoxMesh" id="mesh_b15"]
+material = SubResource("mat_roche3")
+size = Vector3(41.64, 76.69, 19.92)
+
+[sub_resource type="BoxShape3D" id="shape_b15"]
+size = Vector3(41.64, 76.69, 19.92)
+
+[sub_resource type="BoxMesh" id="mesh_b16"]
+material = SubResource("mat_roche2")
+size = Vector3(46.64, 88.57, 20.94)
+
+[sub_resource type="BoxShape3D" id="shape_b16"]
+size = Vector3(46.64, 88.57, 20.94)
+
+[sub_resource type="BoxMesh" id="mesh_b17"]
+material = SubResource("mat_roche1")
+size = Vector3(29.37, 21.44, 15.93)
+
+[sub_resource type="BoxShape3D" id="shape_b17"]
+size = Vector3(29.37, 21.44, 15.93)
+
+[sub_resource type="BoxMesh" id="mesh_b18"]
+material = SubResource("mat_roche2")
+size = Vector3(29.36, 36.24, 15.28)
+
+[sub_resource type="BoxShape3D" id="shape_b18"]
+size = Vector3(29.36, 36.24, 15.28)
+
+[sub_resource type="BoxMesh" id="mesh_b19"]
+material = SubResource("mat_roche2")
+size = Vector3(29.93, 30.34, 12.21)
+
+[sub_resource type="BoxShape3D" id="shape_b19"]
+size = Vector3(29.93, 30.34, 12.21)
+
+[sub_resource type="BoxMesh" id="mesh_b20"]
+material = SubResource("mat_roche3")
+size = Vector3(34.08, 24.00, 12.79)
+
+[sub_resource type="BoxShape3D" id="shape_b20"]
+size = Vector3(34.08, 24.00, 12.79)
+
+[sub_resource type="BoxMesh" id="mesh_b21"]
+material = SubResource("mat_roche3")
+size = Vector3(28.37, 35.98, 19.02)
+
+[sub_resource type="BoxShape3D" id="shape_b21"]
+size = Vector3(28.37, 35.98, 19.02)
+
+[sub_resource type="BoxMesh" id="mesh_b22"]
+material = SubResource("mat_roche3")
+size = Vector3(38.85, 27.65, 16.54)
+
+[sub_resource type="BoxShape3D" id="shape_b22"]
+size = Vector3(38.85, 27.65, 16.54)
+
+[sub_resource type="BoxMesh" id="mesh_b23"]
+material = SubResource("mat_roche3")
+size = Vector3(32.19, 44.82, 11.92)
+
+[sub_resource type="BoxShape3D" id="shape_b23"]
+size = Vector3(32.19, 44.82, 11.92)
+
+[sub_resource type="BoxMesh" id="mesh_b24"]
+material = SubResource("mat_roche1")
+size = Vector3(38.11, 34.87, 11.70)
+
+[sub_resource type="BoxShape3D" id="shape_b24"]
+size = Vector3(38.11, 34.87, 11.70)
+
+[sub_resource type="BoxMesh" id="mesh_b25"]
+material = SubResource("mat_roche1")
+size = Vector3(36.72, 33.45, 19.08)
+
+[sub_resource type="BoxShape3D" id="shape_b25"]
+size = Vector3(36.72, 33.45, 19.08)
+
+[sub_resource type="BoxMesh" id="mesh_b26"]
+material = SubResource("mat_roche3")
+size = Vector3(29.35, 30.04, 14.33)
+
+[sub_resource type="BoxShape3D" id="shape_b26"]
+size = Vector3(29.35, 30.04, 14.33)
+
+[sub_resource type="BoxMesh" id="mesh_b27"]
+material = SubResource("mat_roche1")
+size = Vector3(32.37, 45.54, 16.02)
+
+[sub_resource type="BoxShape3D" id="shape_b27"]
+size = Vector3(32.37, 45.54, 16.02)
+
+[sub_resource type="BoxMesh" id="mesh_b28"]
+material = SubResource("mat_roche1")
+size = Vector3(33.50, 22.21, 15.95)
+
+[sub_resource type="BoxShape3D" id="shape_b28"]
+size = Vector3(33.50, 22.21, 15.95)
+
+[sub_resource type="BoxMesh" id="mesh_b29"]
+material = SubResource("mat_roche3")
+size = Vector3(37.13, 23.46, 11.41)
+
+[sub_resource type="BoxShape3D" id="shape_b29"]
+size = Vector3(37.13, 23.46, 11.41)
+
+[sub_resource type="BoxMesh" id="mesh_b30"]
+material = SubResource("mat_roche3")
+size = Vector3(40.31, 30.43, 16.16)
+
+[sub_resource type="BoxShape3D" id="shape_b30"]
+size = Vector3(40.31, 30.43, 16.16)
+
+[sub_resource type="BoxMesh" id="mesh_b31"]
+material = SubResource("mat_roche1")
+size = Vector3(29.36, 23.84, 17.06)
+
+[sub_resource type="BoxShape3D" id="shape_b31"]
+size = Vector3(29.36, 23.84, 17.06)
+
+[sub_resource type="BoxMesh" id="mesh_b32"]
+material = SubResource("mat_roche2")
+size = Vector3(31.74, 37.80, 12.10)
+
+[sub_resource type="BoxShape3D" id="shape_b32"]
+size = Vector3(31.74, 37.80, 12.10)
+
+[sub_resource type="BoxMesh" id="mesh_b33"]
+material = SubResource("mat_roche1")
+size = Vector3(39.28, 44.93, 16.21)
+
+[sub_resource type="BoxShape3D" id="shape_b33"]
+size = Vector3(39.28, 44.93, 16.21)
+
+[sub_resource type="BoxMesh" id="mesh_b34"]
+material = SubResource("mat_roche2")
+size = Vector3(34.61, 33.23, 9.93)
+
+[sub_resource type="BoxShape3D" id="shape_b34"]
+size = Vector3(34.61, 33.23, 9.93)
+
+[sub_resource type="BoxMesh" id="mesh_b35"]
+material = SubResource("mat_roche3")
+size = Vector3(44.76, 57.01, 17.01)
+
+[sub_resource type="BoxShape3D" id="shape_b35"]
+size = Vector3(44.76, 57.01, 17.01)
+
+[sub_resource type="BoxMesh" id="mesh_b36"]
+material = SubResource("mat_roche1")
+size = Vector3(35.99, 56.25, 17.84)
+
+[sub_resource type="BoxShape3D" id="shape_b36"]
+size = Vector3(35.99, 56.25, 17.84)
+
+[sub_resource type="BoxMesh" id="mesh_b37"]
+material = SubResource("mat_roche2")
+size = Vector3(42.01, 74.32, 22.77)
+
+[sub_resource type="BoxShape3D" id="shape_b37"]
+size = Vector3(42.01, 74.32, 22.77)
+
+[sub_resource type="BoxMesh" id="mesh_b38"]
+material = SubResource("mat_roche1")
+size = Vector3(43.02, 75.01, 18.50)
+
+[sub_resource type="BoxShape3D" id="shape_b38"]
+size = Vector3(43.02, 75.01, 18.50)
+
+[sub_resource type="BoxMesh" id="mesh_b39"]
+material = SubResource("mat_roche3")
+size = Vector3(48.20, 59.34, 17.20)
+
+[sub_resource type="BoxShape3D" id="shape_b39"]
+size = Vector3(48.20, 59.34, 17.20)
+
+[sub_resource type="BoxMesh" id="mesh_b40"]
+material = SubResource("mat_roche1")
+size = Vector3(39.82, 84.90, 17.03)
+
+[sub_resource type="BoxShape3D" id="shape_b40"]
+size = Vector3(39.82, 84.90, 17.03)
+
+[sub_resource type="BoxMesh" id="mesh_b41"]
+material = SubResource("mat_roche1")
+size = Vector3(50.19, 91.75, 18.17)
+
+[sub_resource type="BoxShape3D" id="shape_b41"]
+size = Vector3(50.19, 91.75, 18.17)
+
+[sub_resource type="BoxMesh" id="mesh_b42"]
+material = SubResource("mat_roche2")
+size = Vector3(46.12, 70.35, 27.23)
+
+[sub_resource type="BoxShape3D" id="shape_b42"]
+size = Vector3(46.12, 70.35, 27.23)
+
+[sub_resource type="BoxMesh" id="mesh_b43"]
+material = SubResource("mat_roche1")
+size = Vector3(43.74, 55.31, 20.75)
+
+[sub_resource type="BoxShape3D" id="shape_b43"]
+size = Vector3(43.74, 55.31, 20.75)
+
+[sub_resource type="BoxMesh" id="mesh_b44"]
+material = SubResource("mat_roche2")
+size = Vector3(50.26, 64.96, 16.83)
+
+[sub_resource type="BoxShape3D" id="shape_b44"]
+size = Vector3(50.26, 64.96, 16.83)
+
+[sub_resource type="BoxMesh" id="mesh_b45"]
+material = SubResource("mat_roche2")
+size = Vector3(48.35, 91.49, 23.51)
+
+[sub_resource type="BoxShape3D" id="shape_b45"]
+size = Vector3(48.35, 91.49, 23.51)
+
+[sub_resource type="BoxMesh" id="mesh_b46"]
+material = SubResource("mat_roche2")
+size = Vector3(36.50, 81.44, 16.27)
+
+[sub_resource type="BoxShape3D" id="shape_b46"]
+size = Vector3(36.50, 81.44, 16.27)
+
+[sub_resource type="BoxMesh" id="mesh_b47"]
+material = SubResource("mat_roche2")
+size = Vector3(36.41, 57.20, 25.62)
+
+[sub_resource type="BoxShape3D" id="shape_b47"]
+size = Vector3(36.41, 57.20, 25.62)
+
+[sub_resource type="BoxMesh" id="mesh_b48"]
+material = SubResource("mat_roche2")
+size = Vector3(44.80, 82.27, 16.11)
+
+[sub_resource type="BoxShape3D" id="shape_b48"]
+size = Vector3(44.80, 82.27, 16.11)
+
+[sub_resource type="BoxMesh" id="mesh_b49"]
+material = SubResource("mat_roche2")
+size = Vector3(44.91, 62.63, 21.81)
+
+[sub_resource type="BoxShape3D" id="shape_b49"]
+size = Vector3(44.91, 62.63, 21.81)
+
+[sub_resource type="BoxMesh" id="mesh_b50"]
+material = SubResource("mat_roche3")
+size = Vector3(28.54, 35.28, 9.93)
+
+[sub_resource type="BoxShape3D" id="shape_b50"]
+size = Vector3(28.54, 35.28, 9.93)
+
+[sub_resource type="BoxMesh" id="mesh_b51"]
+material = SubResource("mat_roche1")
+size = Vector3(38.30, 34.94, 13.96)
+
+[sub_resource type="BoxShape3D" id="shape_b51"]
+size = Vector3(38.30, 34.94, 13.96)
+
+[sub_resource type="BoxMesh" id="mesh_b52"]
+material = SubResource("mat_roche1")
+size = Vector3(32.36, 41.55, 17.86)
+
+[sub_resource type="BoxShape3D" id="shape_b52"]
+size = Vector3(32.36, 41.55, 17.86)
+
+[sub_resource type="BoxMesh" id="mesh_b53"]
+material = SubResource("mat_roche3")
+size = Vector3(28.26, 46.95, 15.85)
+
+[sub_resource type="BoxShape3D" id="shape_b53"]
+size = Vector3(28.26, 46.95, 15.85)
+
+[sub_resource type="BoxMesh" id="mesh_b54"]
+material = SubResource("mat_roche2")
+size = Vector3(36.45, 27.06, 12.50)
+
+[sub_resource type="BoxShape3D" id="shape_b54"]
+size = Vector3(36.45, 27.06, 12.50)
+
+[sub_resource type="BoxMesh" id="mesh_b55"]
+material = SubResource("mat_roche1")
+size = Vector3(32.62, 50.23, 12.96)
+
+[sub_resource type="BoxShape3D" id="shape_b55"]
+size = Vector3(32.62, 50.23, 12.96)
+
+[sub_resource type="BoxMesh" id="mesh_b56"]
+material = SubResource("mat_roche2")
+size = Vector3(28.09, 34.31, 13.47)
+
+[sub_resource type="BoxShape3D" id="shape_b56"]
+size = Vector3(28.09, 34.31, 13.47)
+
+[sub_resource type="BoxMesh" id="mesh_b57"]
+material = SubResource("mat_roche3")
+size = Vector3(38.28, 37.81, 11.15)
+
+[sub_resource type="BoxShape3D" id="shape_b57"]
+size = Vector3(38.28, 37.81, 11.15)
+
+[sub_resource type="BoxMesh" id="mesh_b58"]
+material = SubResource("mat_roche2")
+size = Vector3(38.73, 47.36, 11.26)
+
+[sub_resource type="BoxShape3D" id="shape_b58"]
+size = Vector3(38.73, 47.36, 11.26)
+
+[sub_resource type="BoxMesh" id="mesh_b59"]
+material = SubResource("mat_roche3")
+size = Vector3(29.95, 39.57, 16.81)
+
+[sub_resource type="BoxShape3D" id="shape_b59"]
+size = Vector3(29.95, 39.57, 16.81)
+
+[sub_resource type="BoxMesh" id="mesh_b60"]
+material = SubResource("mat_roche3")
+size = Vector3(36.83, 47.89, 14.68)
+
+[sub_resource type="BoxShape3D" id="shape_b60"]
+size = Vector3(36.83, 47.89, 14.68)
+
+[sub_resource type="BoxMesh" id="mesh_b61"]
+material = SubResource("mat_roche2")
+size = Vector3(35.37, 40.81, 18.46)
+
+[sub_resource type="BoxShape3D" id="shape_b61"]
+size = Vector3(35.37, 40.81, 18.46)
+
+[sub_resource type="BoxMesh" id="mesh_b62"]
+material = SubResource("mat_roche2")
+size = Vector3(40.05, 33.58, 13.42)
+
+[sub_resource type="BoxShape3D" id="shape_b62"]
+size = Vector3(40.05, 33.58, 13.42)
+
+[sub_resource type="BoxMesh" id="mesh_b63"]
+material = SubResource("mat_roche3")
+size = Vector3(28.12, 42.85, 17.53)
+
+[sub_resource type="BoxShape3D" id="shape_b63"]
+size = Vector3(28.12, 42.85, 17.53)
+
+[sub_resource type="BoxMesh" id="mesh_b64"]
+material = SubResource("mat_roche2")
+size = Vector3(33.99, 45.90, 17.64)
+
+[sub_resource type="BoxShape3D" id="shape_b64"]
+size = Vector3(33.99, 45.90, 17.64)
+
+[sub_resource type="BoxMesh" id="mesh_b65"]
+material = SubResource("mat_roche1")
+size = Vector3(34.24, 34.45, 13.48)
+
+[sub_resource type="BoxShape3D" id="shape_b65"]
+size = Vector3(34.24, 34.45, 13.48)
+
+[sub_resource type="BoxMesh" id="mesh_b66"]
+material = SubResource("mat_roche2")
+size = Vector3(35.56, 39.83, 12.98)
+
+[sub_resource type="BoxShape3D" id="shape_b66"]
+size = Vector3(35.56, 39.83, 12.98)
+
+[sub_resource type="BoxMesh" id="mesh_b67"]
+material = SubResource("mat_roche2")
+size = Vector3(31.43, 41.10, 16.30)
+
+[sub_resource type="BoxShape3D" id="shape_b67"]
+size = Vector3(31.43, 41.10, 16.30)
+
+[sub_resource type="BoxMesh" id="mesh_b68"]
+material = SubResource("mat_roche1")
+size = Vector3(47.07, 76.01, 27.22)
+
+[sub_resource type="BoxShape3D" id="shape_b68"]
+size = Vector3(47.07, 76.01, 27.22)
+
+[sub_resource type="BoxMesh" id="mesh_b69"]
+material = SubResource("mat_roche3")
+size = Vector3(47.89, 72.13, 26.93)
+
+[sub_resource type="BoxShape3D" id="shape_b69"]
+size = Vector3(47.89, 72.13, 26.93)
+
+[sub_resource type="BoxMesh" id="mesh_b70"]
+material = SubResource("mat_roche1")
+size = Vector3(36.51, 64.81, 24.35)
+
+[sub_resource type="BoxShape3D" id="shape_b70"]
+size = Vector3(36.51, 64.81, 24.35)
+
+[sub_resource type="BoxMesh" id="mesh_b71"]
+material = SubResource("mat_roche2")
+size = Vector3(46.07, 89.61, 18.31)
+
+[sub_resource type="BoxShape3D" id="shape_b71"]
+size = Vector3(46.07, 89.61, 18.31)
+
+[sub_resource type="BoxMesh" id="mesh_b72"]
+material = SubResource("mat_roche2")
+size = Vector3(41.42, 70.83, 24.11)
+
+[sub_resource type="BoxShape3D" id="shape_b72"]
+size = Vector3(41.42, 70.83, 24.11)
+
+[sub_resource type="BoxMesh" id="mesh_b73"]
+material = SubResource("mat_roche2")
+size = Vector3(48.19, 90.73, 17.00)
+
+[sub_resource type="BoxShape3D" id="shape_b73"]
+size = Vector3(48.19, 90.73, 17.00)
+
+[sub_resource type="BoxMesh" id="mesh_b74"]
+material = SubResource("mat_roche1")
+size = Vector3(41.19, 57.58, 25.78)
+
+[sub_resource type="BoxShape3D" id="shape_b74"]
+size = Vector3(41.19, 57.58, 25.78)
+
+[sub_resource type="BoxMesh" id="mesh_b75"]
+material = SubResource("mat_roche2")
+size = Vector3(48.12, 91.09, 18.94)
+
+[sub_resource type="BoxShape3D" id="shape_b75"]
+size = Vector3(48.12, 91.09, 18.94)
+
+[sub_resource type="BoxMesh" id="mesh_b76"]
+material = SubResource("mat_roche1")
+size = Vector3(47.35, 55.73, 20.60)
+
+[sub_resource type="BoxShape3D" id="shape_b76"]
+size = Vector3(47.35, 55.73, 20.60)
+
+[sub_resource type="BoxMesh" id="mesh_b77"]
+material = SubResource("mat_roche1")
+size = Vector3(46.33, 83.16, 16.18)
+
+[sub_resource type="BoxShape3D" id="shape_b77"]
+size = Vector3(46.33, 83.16, 16.18)
+
+[sub_resource type="BoxMesh" id="mesh_b78"]
+material = SubResource("mat_roche3")
+size = Vector3(49.33, 61.26, 22.04)
+
+[sub_resource type="BoxShape3D" id="shape_b78"]
+size = Vector3(49.33, 61.26, 22.04)
+
+[sub_resource type="BoxMesh" id="mesh_b79"]
+material = SubResource("mat_roche1")
+size = Vector3(39.16, 66.33, 23.28)
+
+[sub_resource type="BoxShape3D" id="shape_b79"]
+size = Vector3(39.16, 66.33, 23.28)
+
+[sub_resource type="BoxMesh" id="mesh_b80"]
+material = SubResource("mat_roche3")
+size = Vector3(42.91, 76.07, 25.10)
+
+[sub_resource type="BoxShape3D" id="shape_b80"]
+size = Vector3(42.91, 76.07, 25.10)
+
+[sub_resource type="BoxMesh" id="mesh_b81"]
+material = SubResource("mat_roche1")
+size = Vector3(38.10, 67.94, 16.66)
+
+[sub_resource type="BoxShape3D" id="shape_b81"]
+size = Vector3(38.10, 67.94, 16.66)
+
+[sub_resource type="BoxMesh" id="mesh_b82"]
+material = SubResource("mat_roche2")
+size = Vector3(46.79, 70.74, 20.43)
+
+[sub_resource type="BoxShape3D" id="shape_b82"]
+size = Vector3(46.79, 70.74, 20.43)
+
+[sub_resource type="BoxMesh" id="mesh_b83"]
+material = SubResource("mat_roche1")
+size = Vector3(35.25, 40.93, 13.26)
+
+[sub_resource type="BoxShape3D" id="shape_b83"]
+size = Vector3(35.25, 40.93, 13.26)
+
+[sub_resource type="BoxMesh" id="mesh_b84"]
+material = SubResource("mat_roche2")
+size = Vector3(32.88, 32.97, 16.05)
+
+[sub_resource type="BoxShape3D" id="shape_b84"]
+size = Vector3(32.88, 32.97, 16.05)
+
+[sub_resource type="BoxMesh" id="mesh_b85"]
+material = SubResource("mat_roche3")
+size = Vector3(36.93, 34.27, 18.48)
+
+[sub_resource type="BoxShape3D" id="shape_b85"]
+size = Vector3(36.93, 34.27, 18.48)
+
+[sub_resource type="BoxMesh" id="mesh_b86"]
+material = SubResource("mat_roche3")
+size = Vector3(38.76, 27.25, 19.23)
+
+[sub_resource type="BoxShape3D" id="shape_b86"]
+size = Vector3(38.76, 27.25, 19.23)
+
+[sub_resource type="BoxMesh" id="mesh_b87"]
+material = SubResource("mat_roche3")
+size = Vector3(36.83, 47.42, 18.00)
+
+[sub_resource type="BoxShape3D" id="shape_b87"]
+size = Vector3(36.83, 47.42, 18.00)
+
+[sub_resource type="BoxMesh" id="mesh_b88"]
+material = SubResource("mat_roche1")
+size = Vector3(39.56, 28.98, 16.04)
+
+[sub_resource type="BoxShape3D" id="shape_b88"]
+size = Vector3(39.56, 28.98, 16.04)
+
+[sub_resource type="BoxMesh" id="mesh_b89"]
+material = SubResource("mat_roche3")
+size = Vector3(29.32, 48.94, 12.68)
+
+[sub_resource type="BoxShape3D" id="shape_b89"]
+size = Vector3(29.32, 48.94, 12.68)
+
+[sub_resource type="BoxMesh" id="mesh_b90"]
+material = SubResource("mat_roche1")
+size = Vector3(31.84, 49.42, 14.24)
+
+[sub_resource type="BoxShape3D" id="shape_b90"]
+size = Vector3(31.84, 49.42, 14.24)
+
+[sub_resource type="BoxMesh" id="mesh_b91"]
+material = SubResource("mat_roche1")
+size = Vector3(28.45, 39.77, 13.77)
+
+[sub_resource type="BoxShape3D" id="shape_b91"]
+size = Vector3(28.45, 39.77, 13.77)
+
+[sub_resource type="BoxMesh" id="mesh_b92"]
+material = SubResource("mat_roche3")
+size = Vector3(31.29, 48.37, 16.26)
+
+[sub_resource type="BoxShape3D" id="shape_b92"]
+size = Vector3(31.29, 48.37, 16.26)
+
+[sub_resource type="BoxMesh" id="mesh_b93"]
+material = SubResource("mat_roche1")
+size = Vector3(33.03, 28.61, 9.82)
+
+[sub_resource type="BoxShape3D" id="shape_b93"]
+size = Vector3(33.03, 28.61, 9.82)
+
+[sub_resource type="BoxMesh" id="mesh_b94"]
+material = SubResource("mat_roche1")
+size = Vector3(30.96, 43.23, 11.91)
+
+[sub_resource type="BoxShape3D" id="shape_b94"]
+size = Vector3(30.96, 43.23, 11.91)
+
+[sub_resource type="BoxMesh" id="mesh_b95"]
+material = SubResource("mat_roche3")
+size = Vector3(34.13, 21.26, 18.63)
+
+[sub_resource type="BoxShape3D" id="shape_b95"]
+size = Vector3(34.13, 21.26, 18.63)
+
+[sub_resource type="BoxMesh" id="mesh_b96"]
+material = SubResource("mat_roche1")
+size = Vector3(29.85, 21.38, 10.26)
+
+[sub_resource type="BoxShape3D" id="shape_b96"]
+size = Vector3(29.85, 21.38, 10.26)
+
+[sub_resource type="BoxMesh" id="mesh_b97"]
+material = SubResource("mat_roche2")
+size = Vector3(39.71, 25.29, 12.96)
+
+[sub_resource type="BoxShape3D" id="shape_b97"]
+size = Vector3(39.71, 25.29, 12.96)
+
+[sub_resource type="BoxMesh" id="mesh_b98"]
+material = SubResource("mat_roche1")
+size = Vector3(38.55, 33.30, 19.35)
+
+[sub_resource type="BoxShape3D" id="shape_b98"]
+size = Vector3(38.55, 33.30, 19.35)
+
+[sub_resource type="BoxMesh" id="mesh_b99"]
+material = SubResource("mat_roche3")
+size = Vector3(35.08, 31.36, 17.15)
+
+[sub_resource type="BoxShape3D" id="shape_b99"]
+size = Vector3(35.08, 31.36, 17.15)
+
+[sub_resource type="BoxMesh" id="mesh_b100"]
+material = SubResource("mat_roche2")
+size = Vector3(42.49, 90.46, 19.96)
+
+[sub_resource type="BoxShape3D" id="shape_b100"]
+size = Vector3(42.49, 90.46, 19.96)
+
+[sub_resource type="BoxMesh" id="mesh_b101"]
+material = SubResource("mat_roche1")
+size = Vector3(38.97, 70.39, 22.92)
+
+[sub_resource type="BoxShape3D" id="shape_b101"]
+size = Vector3(38.97, 70.39, 22.92)
+
+[sub_resource type="BoxMesh" id="mesh_b102"]
+material = SubResource("mat_roche3")
+size = Vector3(46.76, 67.82, 26.11)
+
+[sub_resource type="BoxShape3D" id="shape_b102"]
+size = Vector3(46.76, 67.82, 26.11)
+
+[sub_resource type="BoxMesh" id="mesh_b103"]
+material = SubResource("mat_roche1")
+size = Vector3(45.86, 66.20, 26.41)
+
+[sub_resource type="BoxShape3D" id="shape_b103"]
+size = Vector3(45.86, 66.20, 26.41)
+
+[sub_resource type="BoxMesh" id="mesh_b104"]
+material = SubResource("mat_roche2")
+size = Vector3(35.48, 73.13, 18.34)
+
+[sub_resource type="BoxShape3D" id="shape_b104"]
+size = Vector3(35.48, 73.13, 18.34)
+
+[sub_resource type="BoxMesh" id="mesh_b105"]
+material = SubResource("mat_roche1")
+size = Vector3(47.81, 73.97, 17.15)
+
+[sub_resource type="BoxShape3D" id="shape_b105"]
+size = Vector3(47.81, 73.97, 17.15)
+
+[sub_resource type="BoxMesh" id="mesh_b106"]
+material = SubResource("mat_roche1")
+size = Vector3(44.57, 67.06, 19.44)
+
+[sub_resource type="BoxShape3D" id="shape_b106"]
+size = Vector3(44.57, 67.06, 19.44)
+
+[sub_resource type="BoxMesh" id="mesh_b107"]
+material = SubResource("mat_roche1")
+size = Vector3(38.96, 55.92, 16.36)
+
+[sub_resource type="BoxShape3D" id="shape_b107"]
+size = Vector3(38.96, 55.92, 16.36)
+
+[sub_resource type="BoxMesh" id="mesh_b108"]
+material = SubResource("mat_roche2")
+size = Vector3(39.23, 58.36, 16.58)
+
+[sub_resource type="BoxShape3D" id="shape_b108"]
+size = Vector3(39.23, 58.36, 16.58)
+
+[sub_resource type="BoxMesh" id="mesh_b109"]
+material = SubResource("mat_roche2")
+size = Vector3(42.29, 63.76, 26.03)
+
+[sub_resource type="BoxShape3D" id="shape_b109"]
+size = Vector3(42.29, 63.76, 26.03)
+
+[sub_resource type="BoxMesh" id="mesh_b110"]
+material = SubResource("mat_roche1")
+size = Vector3(39.68, 69.15, 22.23)
+
+[sub_resource type="BoxShape3D" id="shape_b110"]
+size = Vector3(39.68, 69.15, 22.23)
+
+[sub_resource type="BoxMesh" id="mesh_b111"]
+material = SubResource("mat_roche3")
+size = Vector3(39.49, 61.94, 26.22)
+
+[sub_resource type="BoxShape3D" id="shape_b111"]
+size = Vector3(39.49, 61.94, 26.22)
+
+[sub_resource type="BoxMesh" id="mesh_b112"]
+material = SubResource("mat_roche2")
+size = Vector3(47.71, 93.25, 23.24)
+
+[sub_resource type="BoxShape3D" id="shape_b112"]
+size = Vector3(47.71, 93.25, 23.24)
+
+[sub_resource type="BoxMesh" id="mesh_b113"]
+material = SubResource("mat_roche2")
+size = Vector3(35.73, 59.25, 19.04)
+
+[sub_resource type="BoxShape3D" id="shape_b113"]
+size = Vector3(35.73, 59.25, 19.04)
+
+[sub_resource type="BoxMesh" id="mesh_b114"]
+material = SubResource("mat_roche3")
+size = Vector3(43.10, 78.12, 17.68)
+
+[sub_resource type="BoxShape3D" id="shape_b114"]
+size = Vector3(43.10, 78.12, 17.68)
+
+[sub_resource type="BoxMesh" id="mesh_b115"]
+material = SubResource("mat_roche3")
+size = Vector3(35.82, 31.00, 11.87)
+
+[sub_resource type="BoxShape3D" id="shape_b115"]
+size = Vector3(35.82, 31.00, 11.87)
+
+[sub_resource type="BoxMesh" id="mesh_b116"]
+material = SubResource("mat_roche1")
+size = Vector3(39.49, 45.05, 17.69)
+
+[sub_resource type="BoxShape3D" id="shape_b116"]
+size = Vector3(39.49, 45.05, 17.69)
+
+[sub_resource type="BoxMesh" id="mesh_b117"]
+material = SubResource("mat_roche1")
+size = Vector3(38.01, 21.47, 15.09)
+
+[sub_resource type="BoxShape3D" id="shape_b117"]
+size = Vector3(38.01, 21.47, 15.09)
+
+[sub_resource type="BoxMesh" id="mesh_b118"]
+material = SubResource("mat_roche3")
+size = Vector3(36.23, 27.96, 13.63)
+
+[sub_resource type="BoxShape3D" id="shape_b118"]
+size = Vector3(36.23, 27.96, 13.63)
+
+[sub_resource type="BoxMesh" id="mesh_b119"]
+material = SubResource("mat_roche3")
+size = Vector3(35.15, 32.49, 13.23)
+
+[sub_resource type="BoxShape3D" id="shape_b119"]
+size = Vector3(35.15, 32.49, 13.23)
+
+[sub_resource type="BoxMesh" id="mesh_b120"]
+material = SubResource("mat_roche2")
+size = Vector3(33.13, 33.05, 18.93)
+
+[sub_resource type="BoxShape3D" id="shape_b120"]
+size = Vector3(33.13, 33.05, 18.93)
+
+[sub_resource type="BoxMesh" id="mesh_b121"]
+material = SubResource("mat_roche3")
+size = Vector3(33.83, 19.96, 11.33)
+
+[sub_resource type="BoxShape3D" id="shape_b121"]
+size = Vector3(33.83, 19.96, 11.33)
+
+[sub_resource type="BoxMesh" id="mesh_b122"]
+material = SubResource("mat_roche2")
+size = Vector3(39.65, 24.86, 16.94)
+
+[sub_resource type="BoxShape3D" id="shape_b122"]
+size = Vector3(39.65, 24.86, 16.94)
+
+[sub_resource type="BoxMesh" id="mesh_b123"]
+material = SubResource("mat_roche2")
+size = Vector3(34.20, 49.67, 17.60)
+
+[sub_resource type="BoxShape3D" id="shape_b123"]
+size = Vector3(34.20, 49.67, 17.60)
+
+[sub_resource type="BoxMesh" id="mesh_b124"]
+material = SubResource("mat_roche3")
+size = Vector3(32.01, 39.35, 15.67)
+
+[sub_resource type="BoxShape3D" id="shape_b124"]
+size = Vector3(32.01, 39.35, 15.67)
+
+[sub_resource type="BoxMesh" id="mesh_b125"]
+material = SubResource("mat_roche2")
+size = Vector3(37.89, 32.12, 11.92)
+
+[sub_resource type="BoxShape3D" id="shape_b125"]
+size = Vector3(37.89, 32.12, 11.92)
+
+[sub_resource type="BoxMesh" id="mesh_b126"]
+material = SubResource("mat_roche3")
+size = Vector3(39.79, 30.71, 11.28)
+
+[sub_resource type="BoxShape3D" id="shape_b126"]
+size = Vector3(39.79, 30.71, 11.28)
+
+[sub_resource type="BoxMesh" id="mesh_b127"]
+material = SubResource("mat_roche2")
+size = Vector3(38.59, 40.34, 16.30)
+
+[sub_resource type="BoxShape3D" id="shape_b127"]
+size = Vector3(38.59, 40.34, 16.30)
+
+[sub_resource type="BoxMesh" id="mesh_b128"]
+material = SubResource("mat_roche1")
+size = Vector3(36.18, 27.28, 12.76)
+
+[sub_resource type="BoxShape3D" id="shape_b128"]
+size = Vector3(36.18, 27.28, 12.76)
+
+[sub_resource type="BoxMesh" id="mesh_b129"]
+material = SubResource("mat_roche2")
+size = Vector3(35.80, 26.84, 14.52)
+
+[sub_resource type="BoxShape3D" id="shape_b129"]
+size = Vector3(35.80, 26.84, 14.52)
+
+[sub_resource type="BoxMesh" id="mesh_b130"]
+material = SubResource("mat_roche1")
+size = Vector3(33.08, 30.69, 10.40)
+
+[sub_resource type="BoxShape3D" id="shape_b130"]
+size = Vector3(33.08, 30.69, 10.40)
+
+[sub_resource type="BoxMesh" id="mesh_b131"]
+material = SubResource("mat_roche2")
+size = Vector3(36.02, 42.38, 10.55)
+
+[sub_resource type="BoxShape3D" id="shape_b131"]
+size = Vector3(36.02, 42.38, 10.55)
+
+[node name="MapForetRelief" type="Node3D"]
+
+[node name="Sol" type="StaticBody3D" parent="."]
+
+[node name="Visuel" type="MeshInstance3D" parent="Sol"]
+mesh = ExtResource("terrain_mesh")
+material_override = ExtResource("mat_sol")
+
+[node name="Collision" type="CollisionShape3D" parent="Sol"]
+shape = ExtResource("terrain_shape")
+
+[node name="MursInvisibles" type="StaticBody3D" parent="."]
+
+[node name="MurNord" type="CollisionShape3D" parent="MursInvisibles"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.000, 58.000, -198.900)
+shape = SubResource("shape_mur_ns")
+
+[node name="MurSud" type="CollisionShape3D" parent="MursInvisibles"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.000, 58.000, 198.900)
+shape = SubResource("shape_mur_ns")
+
+[node name="MurEst" type="CollisionShape3D" parent="MursInvisibles"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 198.900, 58.000, 0.000)
+shape = SubResource("shape_mur_eo")
+
+[node name="MurOuest" type="CollisionShape3D" parent="MursInvisibles"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -198.900, 58.000, 0.000)
+shape = SubResource("shape_mur_eo")
+
+[node name="Falaises" type="Node3D" parent="."]
+
+[node name="Bloc1" type="StaticBody3D" parent="Falaises"]
+transform = Transform3D(0.9989, 0.0461, 0.0113, -0.0463, 0.9988, 0.0141, -0.0106, -0.0146, 0.9998, -198.3241, 34.1432, -209.3912)
+
+[node name="Visuel" type="MeshInstance3D" parent="Falaises/Bloc1"]
+mesh = SubResource("mesh_b1")
+
+[node name="Collision" type="CollisionShape3D" parent="Falaises/Bloc1"]
+shape = SubResource("shape_b1")
+
+[node name="Bloc2" type="StaticBody3D" parent="Falaises"]
+transform = Transform3D(0.9998, -0.0076, 0.0160, 0.0068, 0.9989, 0.0462, -0.0164, -0.0460, 0.9988, -171.0691, 29.6044, -208.6835)
+
+[node name="Visuel" type="MeshInstance3D" parent="Falaises/Bloc2"]
+mesh = SubResource("mesh_b2")
+
+[node name="Collision" type="CollisionShape3D" parent="Falaises/Bloc2"]
+shape = SubResource("shape_b2")
+
+[node name="Bloc3" type="StaticBody3D" parent="Falaises"]
+transform = Transform3D(0.9900, -0.0018, -0.1410, 0.0059, 0.9996, 0.0292, 0.1409, -0.0297, 0.9896, -140.9104, 22.6563, -210.9187)
+
+[node name="Visuel" type="MeshInstance3D" parent="Falaises/Bloc3"]
+mesh = SubResource("mesh_b3")
+
+[node name="Collision" type="CollisionShape3D" parent="Falaises/Bloc3"]
+shape = SubResource("shape_b3")
+
+[node name="Bloc4" type="StaticBody3D" parent="Falaises"]
+transform = Transform3D(0.9950, -0.0118, 0.0991, 0.0085, 0.9994, 0.0334, -0.0994, -0.0324, 0.9945, -112.1139, 23.7469, -208.8924)
+
+[node name="Visuel" type="MeshInstance3D" parent="Falaises/Bloc4"]
+mesh = SubResource("mesh_b4")
+
+[node name="Collision" type="CollisionShape3D" parent="Falaises/Bloc4"]
+shape = SubResource("shape_b4")
+
+[node name="Bloc5" type="StaticBody3D" parent="Falaises"]
+transform = Transform3D(0.9993, -0.0033, 0.0374, 0.0033, 1.0000, 0.0004, -0.0374, -0.0003, 0.9993, -85.1749, 35.3362, -208.1195)
+
+[node name="Visuel" type="MeshInstance3D" parent="Falaises/Bloc5"]
+mesh = SubResource("mesh_b5")
+
+[node name="Collision" type="CollisionShape3D" parent="Falaises/Bloc5"]
+shape = SubResource("shape_b5")
+
+[node name="Bloc6" type="StaticBody3D" parent="Falaises"]
+transform = Transform3D(0.9941, 0.0406, -0.1004, -0.0438, 0.9986, -0.0293, 0.0991, 0.0335, 0.9945, -56.3870, 28.5009, -213.5677)
+
+[node name="Visuel" type="MeshInstance3D" parent="Falaises/Bloc6"]
+mesh = SubResource("mesh_b6")
+
+[node name="Collision" type="CollisionShape3D" parent="Falaises/Bloc6"]
+shape = SubResource("shape_b6")
+
+[node name="Bloc7" type="StaticBody3D" parent="Falaises"]
+transform = Transform3D(0.9887, 0.0025, 0.1502, -0.0086, 0.9992, 0.0400, -0.1499, -0.0408, 0.9879, -26.2678, 35.6742, -213.2081)
+
+[node name="Visuel" type="MeshInstance3D" parent="Falaises/Bloc7"]
+mesh = SubResource("mesh_b7")
+
+[node name="Collision" type="CollisionShape3D" parent="Falaises/Bloc7"]
+shape = SubResource("shape_b7")
+
+[node name="Bloc8" type="StaticBody3D" parent="Falaises"]
+transform = Transform3D(0.9958, -0.0385, 0.0830, 0.0393, 0.9992, -0.0076, -0.0827, 0.0109, 0.9965, 1.1263, 22.2145, -210.2074)
+
+[node name="Visuel" type="MeshInstance3D" parent="Falaises/Bloc8"]
+mesh = SubResource("mesh_b8")
+
+[node name="Collision" type="CollisionShape3D" parent="Falaises/Bloc8"]
+shape = SubResource("shape_b8")
+
+[node name="Bloc9" type="StaticBody3D" parent="Falaises"]
+transform = Transform3D(0.9904, 0.0296, -0.1349, -0.0241, 0.9988, 0.0425, 0.1360, -0.0389, 0.9899, 28.8234, 31.1352, -209.1446)
+
+[node name="Visuel" type="MeshInstance3D" parent="Falaises/Bloc9"]
+mesh = SubResource("mesh_b9")
+
+[node name="Collision" type="CollisionShape3D" parent="Falaises/Bloc9"]
+shape = SubResource("shape_b9")
+
+[node name="Bloc10" type="StaticBody3D" parent="Falaises"]
+transform = Transform3D(0.9877, 0.0275, 0.1542, -0.0225, 0.9992, -0.0337, -0.1550, 0.0298, 0.9875, 59.6350, 35.1291, -207.7430)
+
+[node name="Visuel" type="MeshInstance3D" parent="Falaises/Bloc10"]
+mesh = SubResource("mesh_b10")
+
+[node name="Collision" type="CollisionShape3D" parent="Falaises/Bloc10"]
+shape = SubResource("shape_b10")
+
+[node name="Bloc11" type="StaticBody3D" parent="Falaises"]
+transform = Transform3D(0.9990, 0.0295, 0.0348, -0.0295, 0.9996, 0.0007, -0.0348, -0.0017, 0.9994, 93.1961, 39.7926, -209.9868)
+
+[node name="Visuel" type="MeshInstance3D" parent="Falaises/Bloc11"]
+mesh = SubResource("mesh_b11")
+
+[node name="Collision" type="CollisionShape3D" parent="Falaises/Bloc11"]
+shape = SubResource("shape_b11")
+
+[node name="Bloc12" type="StaticBody3D" parent="Falaises"]
+transform = Transform3D(0.9913, -0.0044, -0.1314, 0.0052, 1.0000, 0.0053, 0.1314, -0.0060, 0.9913, 121.5425, 29.0735, -208.3993)
+
+[node name="Visuel" type="MeshInstance3D" parent="Falaises/Bloc12"]
+mesh = SubResource("mesh_b12")
+
+[node name="Collision" type="CollisionShape3D" parent="Falaises/Bloc12"]
+shape = SubResource("shape_b12")
+
+[node name="Bloc13" type="StaticBody3D" parent="Falaises"]
+transform = Transform3D(0.9978, -0.0496, -0.0443, 0.0479, 0.9980, -0.0402, 0.0462, 0.0380, 0.9982, 152.9064, 26.8792, -212.8945)
+
+[node name="Visuel" type="MeshInstance3D" parent="Falaises/Bloc13"]
+mesh = SubResource("mesh_b13")
+
+[node name="Collision" type="CollisionShape3D" parent="Falaises/Bloc13"]
+shape = SubResource("shape_b13")
+
+[node name="Bloc14" type="StaticBody3D" parent="Falaises"]
+transform = Transform3D(0.9944, 0.0193, 0.1038, -0.0228, 0.9992, 0.0333, -0.1030, -0.0354, 0.9940, 180.6798, 34.2911, -209.5116)
+
+[node name="Visuel" type="MeshInstance3D" parent="Falaises/Bloc14"]
+mesh = SubResource("mesh_b14")
+
+[node name="Collision" type="CollisionShape3D" parent="Falaises/Bloc14"]
+shape = SubResource("shape_b14")
+
+[node name="Bloc15" type="StaticBody3D" parent="Falaises"]
+transform = Transform3D(0.9981, -0.0122, 0.0598, 0.0123, 0.9999, -0.0016, -0.0598, 0.0024, 0.9982, 208.7765, 32.4937, -208.9516)
+
+[node name="Visuel" type="MeshInstance3D" parent="Falaises/Bloc15"]
+mesh = SubResource("mesh_b15")
+
+[node name="Collision" type="CollisionShape3D" parent="Falaises/Bloc15"]
+shape = SubResource("shape_b15")
+
+[node name="Bloc16" type="StaticBody3D" parent="Falaises"]
+transform = Transform3D(0.9983, 0.0110, 0.0567, -0.0107, 0.9999, -0.0062, -0.0568, 0.0056, 0.9984, 240.4240, 38.4341, -209.4652)
+
+[node name="Visuel" type="MeshInstance3D" parent="Falaises/Bloc16"]
+mesh = SubResource("mesh_b16")
+
+[node name="Collision" type="CollisionShape3D" parent="Falaises/Bloc16"]
+shape = SubResource("shape_b16")
+
+[node name="Bloc17" type="StaticBody3D" parent="Falaises"]
+transform = Transform3D(0.9956, 0.0199, -0.0913, -0.0167, 0.9992, 0.0354, 0.0919, -0.0337, 0.9952, -200.0424, 4.8711, -202.5732)
+
+[node name="Visuel" type="MeshInstance3D" parent="Falaises/Bloc17"]
+mesh = SubResource("mesh_b17")
+
+[node name="Collision" type="CollisionShape3D" parent="Falaises/Bloc17"]
+shape = SubResource("shape_b17")
+
+[node name="Bloc18" type="StaticBody3D" parent="Falaises"]
+transform = Transform3D(0.9989, 0.0290, 0.0357, -0.0305, 0.9985, 0.0450, -0.0343, -0.0460, 0.9984, -178.0223, 12.2713, -197.0867)
+
+[node name="Visuel" type="MeshInstance3D" parent="Falaises/Bloc18"]
+mesh = SubResource("mesh_b18")
+
+[node name="Collision" type="CollisionShape3D" parent="Falaises/Bloc18"]
+shape = SubResource("shape_b18")
+
+[node name="Bloc19" type="StaticBody3D" parent="Falaises"]
+transform = Transform3D(0.9914, -0.0556, -0.1181, 0.0516, 0.9980, -0.0365, 0.1199, 0.0301, 0.9923, -155.6439, 9.3193, -198.9744)
+
+[node name="Visuel" type="MeshInstance3D" parent="Falaises/Bloc19"]
+mesh = SubResource("mesh_b19")
+
+[node name="Collision" type="CollisionShape3D" parent="Falaises/Bloc19"]
+shape = SubResource("shape_b19")
+
+[node name="Bloc20" type="StaticBody3D" parent="Falaises"]
+transform = Transform3D(0.9969, -0.0202, 0.0754, 0.0201, 0.9998, 0.0022, -0.0755, -0.0007, 0.9971, -130.6051, 6.1482, -197.0097)
+
+[node name="Visuel" type="MeshInstance3D" parent="Falaises/Bloc20"]
+mesh = SubResource("mesh_b20")
+
+[node name="Collision" type="CollisionShape3D" parent="Falaises/Bloc20"]
+shape = SubResource("shape_b20")
+
+[node name="Bloc21" type="StaticBody3D" parent="Falaises"]
+transform = Transform3D(0.9999, -0.0036, 0.0135, 0.0029, 0.9988, 0.0495, -0.0137, -0.0495, 0.9987, -108.6155, 12.1408, -203.6534)
+
+[node name="Visuel" type="MeshInstance3D" parent="Falaises/Bloc21"]
+mesh = SubResource("mesh_b21")
+
+[node name="Collision" type="CollisionShape3D" parent="Falaises/Bloc21"]
+shape = SubResource("shape_b21")
+
+[node name="Bloc22" type="StaticBody3D" parent="Falaises"]
+transform = Transform3D(0.9945, -0.0064, -0.1044, 0.0034, 0.9996, -0.0285, 0.1045, 0.0280, 0.9941, -80.7856, 7.9734, -201.1238)
+
+[node name="Visuel" type="MeshInstance3D" parent="Falaises/Bloc22"]
+mesh = SubResource("mesh_b22")
+
+[node name="Collision" type="CollisionShape3D" parent="Falaises/Bloc22"]
+shape = SubResource("shape_b22")
+
+[node name="Bloc23" type="StaticBody3D" parent="Falaises"]
+transform = Transform3D(0.9934, -0.0296, 0.1105, 0.0333, 0.9989, -0.0320, -0.1094, 0.0355, 0.9934, -55.8074, 16.5596, -195.2005)
+
+[node name="Visuel" type="MeshInstance3D" parent="Falaises/Bloc23"]
+mesh = SubResource("mesh_b23")
+
+[node name="Collision" type="CollisionShape3D" parent="Falaises/Bloc23"]
+shape = SubResource("shape_b23")
+
+[node name="Bloc24" type="StaticBody3D" parent="Falaises"]
+transform = Transform3D(0.9882, 0.0075, 0.1531, -0.0029, 0.9995, -0.0304, -0.1533, 0.0296, 0.9877, -27.9672, 11.5874, -196.5732)
+
+[node name="Visuel" type="MeshInstance3D" parent="Falaises/Bloc24"]
+mesh = SubResource("mesh_b24")
+
+[node name="Collision" type="CollisionShape3D" parent="Falaises/Bloc24"]
+shape = SubResource("shape_b24")
+
+[node name="Bloc25" type="StaticBody3D" parent="Falaises"]
+transform = Transform3D(0.9881, 0.0213, 0.1525, -0.0142, 0.9988, -0.0476, -0.1534, 0.0449, 0.9871, -0.2523, 10.8768, -199.0564)
+
+[node name="Visuel" type="MeshInstance3D" parent="Falaises/Bloc25"]
+mesh = SubResource("mesh_b25")
+
+[node name="Collision" type="CollisionShape3D" parent="Falaises/Bloc25"]
+shape = SubResource("shape_b25")
+
+[node name="Bloc26" type="StaticBody3D" parent="Falaises"]
+transform = Transform3D(0.9870, 0.0533, 0.1518, -0.0521, 0.9986, -0.0115, -0.1522, 0.0035, 0.9883, 22.6848, 9.1687, -199.3431)
+
+[node name="Visuel" type="MeshInstance3D" parent="Falaises/Bloc26"]
+mesh = SubResource("mesh_b26")
+
+[node name="Collision" type="CollisionShape3D" parent="Falaises/Bloc26"]
+shape = SubResource("shape_b26")
+
+[node name="Bloc27" type="StaticBody3D" parent="Falaises"]
+transform = Transform3D(0.9989, 0.0307, -0.0350, -0.0315, 0.9993, -0.0221, 0.0343, 0.0232, 0.9991, 46.5875, 16.9205, -202.3088)
+
+[node name="Visuel" type="MeshInstance3D" parent="Falaises/Bloc27"]
+mesh = SubResource("mesh_b27")
+
+[node name="Collision" type="CollisionShape3D" parent="Falaises/Bloc27"]
+shape = SubResource("shape_b27")
+
+[node name="Bloc28" type="StaticBody3D" parent="Falaises"]
+transform = Transform3D(0.9972, -0.0257, 0.0696, 0.0255, 0.9997, 0.0039, -0.0697, -0.0021, 0.9976, 71.5687, 5.2533, -197.4397)
+
+[node name="Visuel" type="MeshInstance3D" parent="Falaises/Bloc28"]
+mesh = SubResource("mesh_b28")
+
+[node name="Collision" type="CollisionShape3D" parent="Falaises/Bloc28"]
+shape = SubResource("shape_b28")
+
+[node name="Bloc29" type="StaticBody3D" parent="Falaises"]
+transform = Transform3D(0.9911, 0.0408, 0.1268, -0.0370, 0.9988, -0.0321, -0.1279, 0.0271, 0.9914, 98.9591, 5.8818, -199.8195)
+
+[node name="Visuel" type="MeshInstance3D" parent="Falaises/Bloc29"]
+mesh = SubResource("mesh_b29")
+
+[node name="Collision" type="CollisionShape3D" parent="Falaises/Bloc29"]
+shape = SubResource("shape_b29")
+
+[node name="Bloc30" type="StaticBody3D" parent="Falaises"]
+transform = Transform3D(0.9924, -0.0431, -0.1155, 0.0492, 0.9975, 0.0508, 0.1130, -0.0561, 0.9920, 128.7961, 9.3664, -199.8695)
+
+[node name="Visuel" type="MeshInstance3D" parent="Falaises/Bloc30"]
+mesh = SubResource("mesh_b30")
+
+[node name="Collision" type="CollisionShape3D" parent="Falaises/Bloc30"]
+shape = SubResource("shape_b30")
+
+[node name="Bloc31" type="StaticBody3D" parent="Falaises"]
+transform = Transform3D(0.9944, 0.0454, -0.0957, -0.0494, 0.9980, -0.0391, 0.0937, 0.0436, 0.9946, 152.1870, 6.0723, -197.7575)
+
+[node name="Visuel" type="MeshInstance3D" parent="Falaises/Bloc31"]
+mesh = SubResource("mesh_b31")
+
+[node name="Collision" type="CollisionShape3D" parent="Falaises/Bloc31"]
+shape = SubResource("shape_b31")
+
+[node name="Bloc32" type="StaticBody3D" parent="Falaises"]
+transform = Transform3D(0.9988, -0.0419, -0.0254, 0.0429, 0.9983, 0.0386, 0.0238, -0.0397, 0.9989, 175.6925, 13.0484, -199.5303)
+
+[node name="Visuel" type="MeshInstance3D" parent="Falaises/Bloc32"]
+mesh = SubResource("mesh_b32")
+
+[node name="Collision" type="CollisionShape3D" parent="Falaises/Bloc32"]
+shape = SubResource("shape_b32")
+
+[node name="Bloc33" type="StaticBody3D" parent="Falaises"]
+transform = Transform3D(0.9938, 0.0425, 0.1025, -0.0386, 0.9985, -0.0396, -0.1040, 0.0354, 0.9939, 204.2116, 16.6147, -200.0815)
+
+[node name="Visuel" type="MeshInstance3D" parent="Falaises/Bloc33"]
+mesh = SubResource("mesh_b33")
+
+[node name="Collision" type="CollisionShape3D" parent="Falaises/Bloc33"]
+shape = SubResource("shape_b33")
+
+[node name="Bloc34" type="StaticBody3D" parent="Falaises"]
+transform = Transform3D(0.9875, 0.0290, -0.1551, -0.0343, 0.9989, -0.0313, 0.1541, 0.0363, 0.9874, 230.7554, 10.7659, -198.8950)
+
+[node name="Visuel" type="MeshInstance3D" parent="Falaises/Bloc34"]
+mesh = SubResource("mesh_b34")
+
+[node name="Collision" type="CollisionShape3D" parent="Falaises/Bloc34"]
+shape = SubResource("shape_b34")
+
+[node name="Bloc35" type="StaticBody3D" parent="Falaises"]
+transform = Transform3D(0.9995, -0.0290, 0.0097, 0.0289, 0.9996, 0.0018, -0.0097, -0.0016, 1.0000, -196.0210, 22.6542, 208.0234)
+
+[node name="Visuel" type="MeshInstance3D" parent="Falaises/Bloc35"]
+mesh = SubResource("mesh_b35")
+
+[node name="Collision" type="CollisionShape3D" parent="Falaises/Bloc35"]
+shape = SubResource("shape_b35")
+
+[node name="Bloc36" type="StaticBody3D" parent="Falaises"]
+transform = Transform3D(0.9991, -0.0405, -0.0150, 0.0412, 0.9979, 0.0494, 0.0130, -0.0500, 0.9987, -169.0762, 22.2729, 209.5785)
+
+[node name="Visuel" type="MeshInstance3D" parent="Falaises/Bloc36"]
+mesh = SubResource("mesh_b36")
+
+[node name="Collision" type="CollisionShape3D" parent="Falaises/Bloc36"]
+shape = SubResource("shape_b36")
+
+[node name="Bloc37" type="StaticBody3D" parent="Falaises"]
+transform = Transform3D(0.9982, -0.0038, 0.0605, 0.0035, 1.0000, 0.0050, -0.0605, -0.0048, 0.9982, -140.8716, 31.3083, 211.2346)
+
+[node name="Visuel" type="MeshInstance3D" parent="Falaises/Bloc37"]
+mesh = SubResource("mesh_b37")
+
+[node name="Collision" type="CollisionShape3D" parent="Falaises/Bloc37"]
+shape = SubResource("shape_b37")
+
+[node name="Bloc38" type="StaticBody3D" parent="Falaises"]
+transform = Transform3D(0.9904, -0.0348, 0.1339, 0.0411, 0.9982, -0.0443, -0.1321, 0.0493, 0.9900, -110.9582, 31.6526, 208.3906)
+
+[node name="Visuel" type="MeshInstance3D" parent="Falaises/Bloc38"]
+mesh = SubResource("mesh_b38")
+
+[node name="Collision" type="CollisionShape3D" parent="Falaises/Bloc38"]
+shape = SubResource("shape_b38")
+
+[node name="Bloc39" type="StaticBody3D" parent="Falaises"]
+transform = Transform3D(0.9898, 0.0479, -0.1338, -0.0447, 0.9986, 0.0272, 0.1350, -0.0209, 0.9906, -78.2520, 23.8216, 208.5901)
+
+[node name="Visuel" type="MeshInstance3D" parent="Falaises/Bloc39"]
+mesh = SubResource("mesh_b39")
+
+[node name="Collision" type="CollisionShape3D" parent="Falaises/Bloc39"]
+shape = SubResource("shape_b39")
+
+[node name="Bloc40" type="StaticBody3D" parent="Falaises"]
+transform = Transform3D(0.9987, 0.0252, 0.0450, -0.0258, 0.9996, 0.0140, -0.0447, -0.0152, 0.9989, -48.6995, 36.6002, 207.5337)
+
+[node name="Visuel" type="MeshInstance3D" parent="Falaises/Bloc40"]
+mesh = SubResource("mesh_b40")
+
+[node name="Collision" type="CollisionShape3D" parent="Falaises/Bloc40"]
+shape = SubResource("shape_b40")
+
+[node name="Bloc41" type="StaticBody3D" parent="Falaises"]
+transform = Transform3D(0.9994, -0.0350, -0.0040, 0.0348, 0.9981, -0.0513, 0.0058, 0.0511, 0.9987, -15.6380, 40.0238, 209.1580)
+
+[node name="Visuel" type="MeshInstance3D" parent="Falaises/Bloc41"]
+mesh = SubResource("mesh_b41")
+
+[node name="Collision" type="CollisionShape3D" parent="Falaises/Bloc41"]
+shape = SubResource("shape_b41")
+
+[node name="Bloc42" type="StaticBody3D" parent="Falaises"]
+transform = Transform3D(0.9989, 0.0159, -0.0450, -0.0140, 0.9990, 0.0427, 0.0456, -0.0420, 0.9981, 17.4601, 29.3243, 213.6438)
+
+[node name="Visuel" type="MeshInstance3D" parent="Falaises/Bloc42"]
+mesh = SubResource("mesh_b42")
+
+[node name="Collision" type="CollisionShape3D" parent="Falaises/Bloc42"]
+shape = SubResource("shape_b42")
+
+[node name="Bloc43" type="StaticBody3D" parent="Falaises"]
+transform = Transform3D(0.9982, 0.0456, 0.0389, -0.0456, 0.9990, -0.0013, -0.0389, -0.0005, 0.9992, 48.5554, 21.8026, 210.5803)
+
+[node name="Visuel" type="MeshInstance3D" parent="Falaises/Bloc43"]
+mesh = SubResource("mesh_b43")
+
+[node name="Collision" type="CollisionShape3D" parent="Falaises/Bloc43"]
+shape = SubResource("shape_b43")
+
+[node name="Bloc44" type="StaticBody3D" parent="Falaises"]
+transform = Transform3D(0.9955, 0.0365, 0.0875, -0.0388, 0.9990, 0.0240, -0.0865, -0.0273, 0.9959, 82.4333, 26.6285, 209.1858)
+
+[node name="Visuel" type="MeshInstance3D" parent="Falaises/Bloc44"]
+mesh = SubResource("mesh_b44")
+
+[node name="Collision" type="CollisionShape3D" parent="Falaises/Bloc44"]
+shape = SubResource("shape_b44")
+
+[node name="Bloc45" type="StaticBody3D" parent="Falaises"]
+transform = Transform3D(0.9999, 0.0006, 0.0115, -0.0006, 1.0000, -0.0015, -0.0115, 0.0015, 0.9999, 116.6617, 39.8970, 211.8128)
+
+[node name="Visuel" type="MeshInstance3D" parent="Falaises/Bloc45"]
+mesh = SubResource("mesh_b45")
+
+[node name="Collision" type="CollisionShape3D" parent="Falaises/Bloc45"]
+shape = SubResource("shape_b45")
+
+[node name="Bloc46" type="StaticBody3D" parent="Falaises"]
+transform = Transform3D(0.9908, -0.0201, -0.1338, 0.0141, 0.9988, -0.0459, 0.1346, 0.0436, 0.9899, 144.5803, 34.8700, 208.1572)
+
+[node name="Visuel" type="MeshInstance3D" parent="Falaises/Bloc46"]
+mesh = SubResource("mesh_b46")
+
+[node name="Collision" type="CollisionShape3D" parent="Falaises/Bloc46"]
+shape = SubResource("shape_b46")
+
+[node name="Bloc47" type="StaticBody3D" parent="Falaises"]
+transform = Transform3D(0.9999, -0.0053, -0.0145, 0.0056, 0.9998, 0.0168, 0.0144, -0.0169, 0.9998, 170.0826, 22.7491, 211.9765)
+
+[node name="Visuel" type="MeshInstance3D" parent="Falaises/Bloc47"]
+mesh = SubResource("mesh_b47")
+
+[node name="Collision" type="CollisionShape3D" parent="Falaises/Bloc47"]
+shape = SubResource("shape_b47")
+
+[node name="Bloc48" type="StaticBody3D" parent="Falaises"]
+transform = Transform3D(0.9887, 0.0294, 0.1468, -0.0334, 0.9991, 0.0249, -0.1460, -0.0296, 0.9888, 199.7631, 35.2860, 207.0734)
+
+[node name="Visuel" type="MeshInstance3D" parent="Falaises/Bloc48"]
+mesh = SubResource("mesh_b48")
+
+[node name="Collision" type="CollisionShape3D" parent="Falaises/Bloc48"]
+shape = SubResource("shape_b48")
+
+[node name="Bloc49" type="StaticBody3D" parent="Falaises"]
+transform = Transform3D(0.9980, -0.0330, 0.0540, 0.0318, 0.9992, 0.0240, -0.0548, -0.0223, 0.9982, 231.1765, 25.4645, 210.8878)
+
+[node name="Visuel" type="MeshInstance3D" parent="Falaises/Bloc49"]
+mesh = SubResource("mesh_b49")
+
+[node name="Collision" type="CollisionShape3D" parent="Falaises/Bloc49"]
+shape = SubResource("shape_b49")
+
+[node name="Bloc50" type="StaticBody3D" parent="Falaises"]
+transform = Transform3D(1.0000, 0.0054, 0.0045, -0.0055, 0.9996, 0.0266, -0.0043, -0.0267, 0.9996, -200.5618, 11.7882, 194.2433)
+
+[node name="Visuel" type="MeshInstance3D" parent="Falaises/Bloc50"]
+mesh = SubResource("mesh_b50")
+
+[node name="Collision" type="CollisionShape3D" parent="Falaises/Bloc50"]
+shape = SubResource("shape_b50")
+
+[node name="Bloc51" type="StaticBody3D" parent="Falaises"]
+transform = Transform3D(0.9992, -0.0197, -0.0336, 0.0197, 0.9998, -0.0007, 0.0336, 0.0000, 0.9994, -173.0566, 11.6220, 197.0994)
+
+[node name="Visuel" type="MeshInstance3D" parent="Falaises/Bloc51"]
+mesh = SubResource("mesh_b51")
+
+[node name="Collision" type="CollisionShape3D" parent="Falaises/Bloc51"]
+shape = SubResource("shape_b51")
+
+[node name="Bloc52" type="StaticBody3D" parent="Falaises"]
+transform = Transform3D(0.9984, 0.0471, -0.0299, -0.0466, 0.9988, 0.0160, 0.0306, -0.0145, 0.9994, -148.0460, 14.9249, 200.2119)
+
+[node name="Visuel" type="MeshInstance3D" parent="Falaises/Bloc52"]
+mesh = SubResource("mesh_b52")
+
+[node name="Collision" type="CollisionShape3D" parent="Falaises/Bloc52"]
+shape = SubResource("shape_b52")
+
+[node name="Bloc53" type="StaticBody3D" parent="Falaises"]
+transform = Transform3D(0.9902, 0.0099, -0.1392, -0.0125, 0.9998, -0.0173, 0.1390, 0.0189, 0.9901, -126.3402, 17.6257, 200.4042)
+
+[node name="Visuel" type="MeshInstance3D" parent="Falaises/Bloc53"]
+mesh = SubResource("mesh_b53")
+
+[node name="Collision" type="CollisionShape3D" parent="Falaises/Bloc53"]
+shape = SubResource("shape_b53")
+
+[node name="Bloc54" type="StaticBody3D" parent="Falaises"]
+transform = Transform3D(0.9999, 0.0061, -0.0127, -0.0057, 0.9993, 0.0359, 0.0129, -0.0358, 0.9993, -100.0277, 7.6785, 199.5350)
+
+[node name="Visuel" type="MeshInstance3D" parent="Falaises/Bloc54"]
+mesh = SubResource("mesh_b54")
+
+[node name="Collision" type="CollisionShape3D" parent="Falaises/Bloc54"]
+shape = SubResource("shape_b54")
+
+[node name="Bloc55" type="StaticBody3D" parent="Falaises"]
+transform = Transform3D(0.9891, 0.0234, -0.1456, -0.0295, 0.9988, -0.0400, 0.1445, 0.0439, 0.9885, -75.0813, 19.2646, 199.5858)
+
+[node name="Visuel" type="MeshInstance3D" parent="Falaises/Bloc55"]
+mesh = SubResource("mesh_b55")
+
+[node name="Collision" type="CollisionShape3D" parent="Falaises/Bloc55"]
+shape = SubResource("shape_b55")
+
+[node name="Bloc56" type="StaticBody3D" parent="Falaises"]
+transform = Transform3D(0.9943, 0.0515, -0.0938, -0.0518, 0.9987, -0.0005, 0.0937, 0.0054, 0.9956, -53.4449, 11.3044, 198.7943)
+
+[node name="Visuel" type="MeshInstance3D" parent="Falaises/Bloc56"]
+mesh = SubResource("mesh_b56")
+
+[node name="Collision" type="CollisionShape3D" parent="Falaises/Bloc56"]
+shape = SubResource("shape_b56")
+
+[node name="Bloc57" type="StaticBody3D" parent="Falaises"]
+transform = Transform3D(0.9971, 0.0426, -0.0629, -0.0435, 0.9990, -0.0136, 0.0623, 0.0163, 0.9979, -26.0103, 13.0541, 198.2716)
+
+[node name="Visuel" type="MeshInstance3D" parent="Falaises/Bloc57"]
+mesh = SubResource("mesh_b57")
+
+[node name="Collision" type="CollisionShape3D" parent="Falaises/Bloc57"]
+shape = SubResource("shape_b57")
+
+[node name="Bloc58" type="StaticBody3D" parent="Falaises"]
+transform = Transform3D(0.9993, -0.0223, 0.0303, 0.0231, 0.9994, -0.0277, -0.0297, 0.0284, 0.9992, 2.9796, 17.8277, 196.0452)
+
+[node name="Visuel" type="MeshInstance3D" parent="Falaises/Bloc58"]
+mesh = SubResource("mesh_b58")
+
+[node name="Collision" type="CollisionShape3D" parent="Falaises/Bloc58"]
+shape = SubResource("shape_b58")
+
+[node name="Bloc59" type="StaticBody3D" parent="Falaises"]
+transform = Transform3D(0.9944, -0.0089, 0.1051, 0.0133, 0.9991, -0.0410, -0.1046, 0.0422, 0.9936, 26.5365, 13.9342, 203.1491)
+
+[node name="Visuel" type="MeshInstance3D" parent="Falaises/Bloc59"]
+mesh = SubResource("mesh_b59")
+
+[node name="Collision" type="CollisionShape3D" parent="Falaises/Bloc59"]
+shape = SubResource("shape_b59")
+
+[node name="Bloc60" type="StaticBody3D" parent="Falaises"]
+transform = Transform3D(0.9984, 0.0513, 0.0215, -0.0506, 0.9982, -0.0328, -0.0231, 0.0316, 0.9992, 53.2979, 18.0942, 197.9352)
+
+[node name="Visuel" type="MeshInstance3D" parent="Falaises/Bloc60"]
+mesh = SubResource("mesh_b60")
+
+[node name="Collision" type="CollisionShape3D" parent="Falaises/Bloc60"]
+shape = SubResource("shape_b60")
+
+[node name="Bloc61" type="StaticBody3D" parent="Falaises"]
+transform = Transform3D(0.9955, 0.0424, -0.0846, -0.0384, 0.9981, 0.0491, 0.0866, -0.0456, 0.9952, 80.0072, 14.5532, 200.1716)
+
+[node name="Visuel" type="MeshInstance3D" parent="Falaises/Bloc61"]
+mesh = SubResource("mesh_b61")
+
+[node name="Collision" type="CollisionShape3D" parent="Falaises/Bloc61"]
+shape = SubResource("shape_b61")
+
+[node name="Bloc62" type="StaticBody3D" parent="Falaises"]
+transform = Transform3D(0.9883, 0.0259, -0.1506, -0.0267, 0.9996, -0.0033, 0.1504, 0.0073, 0.9886, 109.4625, 10.9416, 201.4139)
+
+[node name="Visuel" type="MeshInstance3D" parent="Falaises/Bloc62"]
+mesh = SubResource("mesh_b62")
+
+[node name="Collision" type="CollisionShape3D" parent="Falaises/Bloc62"]
+shape = SubResource("shape_b62")
+
+[node name="Bloc63" type="StaticBody3D" parent="Falaises"]
+transform = Transform3D(0.9989, 0.0456, 0.0111, -0.0454, 0.9988, -0.0167, -0.0118, 0.0162, 0.9998, 132.0452, 15.5729, 200.8214)
+
+[node name="Visuel" type="MeshInstance3D" parent="Falaises/Bloc63"]
+mesh = SubResource("mesh_b63")
+
+[node name="Collision" type="CollisionShape3D" parent="Falaises/Bloc63"]
+shape = SubResource("shape_b63")
+
+[node name="Bloc64" type="StaticBody3D" parent="Falaises"]
+transform = Transform3D(0.9966, -0.0179, 0.0804, 0.0157, 0.9995, 0.0282, -0.0809, -0.0268, 0.9964, 156.8065, 17.0997, 202.4464)
+
+[node name="Visuel" type="MeshInstance3D" parent="Falaises/Bloc64"]
+mesh = SubResource("mesh_b64")
+
+[node name="Collision" type="CollisionShape3D" parent="Falaises/Bloc64"]
+shape = SubResource("shape_b64")
+
+[node name="Bloc65" type="StaticBody3D" parent="Falaises"]
+transform = Transform3D(0.9964, -0.0139, 0.0838, 0.0149, 0.9998, -0.0122, -0.0836, 0.0135, 0.9964, 182.4585, 11.3726, 197.7404)
+
+[node name="Visuel" type="MeshInstance3D" parent="Falaises/Bloc65"]
+mesh = SubResource("mesh_b65")
+
+[node name="Collision" type="CollisionShape3D" parent="Falaises/Bloc65"]
+shape = SubResource("shape_b65")
+
+[node name="Bloc66" type="StaticBody3D" parent="Falaises"]
+transform = Transform3D(0.9993, 0.0004, 0.0380, -0.0018, 0.9993, 0.0384, -0.0380, -0.0384, 0.9985, 208.9668, 14.0639, 197.4390)
+
+[node name="Visuel" type="MeshInstance3D" parent="Falaises/Bloc66"]
+mesh = SubResource("mesh_b66")
+
+[node name="Collision" type="CollisionShape3D" parent="Falaises/Bloc66"]
+shape = SubResource("shape_b66")
+
+[node name="Bloc67" type="StaticBody3D" parent="Falaises"]
+transform = Transform3D(0.9978, 0.0036, -0.0657, -0.0037, 1.0000, -0.0017, 0.0657, 0.0020, 0.9978, 233.0588, 14.6981, 199.1981)
+
+[node name="Visuel" type="MeshInstance3D" parent="Falaises/Bloc67"]
+mesh = SubResource("mesh_b67")
+
+[node name="Collision" type="CollisionShape3D" parent="Falaises/Bloc67"]
+shape = SubResource("shape_b67")
+
+[node name="Bloc68" type="StaticBody3D" parent="Falaises"]
+transform = Transform3D(0.1298, 0.0000, 0.9915, -0.0220, 0.9998, 0.0028, -0.9913, -0.0222, 0.1297, 213.8530, 32.1570, -194.8661)
+
+[node name="Visuel" type="MeshInstance3D" parent="Falaises/Bloc68"]
+mesh = SubResource("mesh_b68")
+
+[node name="Collision" type="CollisionShape3D" parent="Falaises/Bloc68"]
+shape = SubResource("shape_b68")
+
+[node name="Bloc69" type="StaticBody3D" parent="Falaises"]
+transform = Transform3D(0.0896, 0.0492, 0.9948, -0.0303, 0.9985, -0.0466, -0.9955, -0.0259, 0.0909, 213.7896, 30.2143, -161.5073)
+
+[node name="Visuel" type="MeshInstance3D" parent="Falaises/Bloc69"]
+mesh = SubResource("mesh_b69")
+
+[node name="Collision" type="CollisionShape3D" parent="Falaises/Bloc69"]
+shape = SubResource("shape_b69")
+
+[node name="Bloc70" type="StaticBody3D" parent="Falaises"]
+transform = Transform3D(-0.0328, 0.0130, 0.9994, -0.0231, 0.9996, -0.0138, -0.9992, -0.0235, -0.0325, 212.3217, 26.5553, -133.6749)
+
+[node name="Visuel" type="MeshInstance3D" parent="Falaises/Bloc70"]
+mesh = SubResource("mesh_b70")
+
+[node name="Collision" type="CollisionShape3D" parent="Falaises/Bloc70"]
+shape = SubResource("shape_b70")
+
+[node name="Bloc71" type="StaticBody3D" parent="Falaises"]
+transform = Transform3D(0.1488, -0.0513, 0.9875, -0.0009, 0.9986, 0.0520, -0.9889, -0.0086, 0.1485, 209.0556, 38.9553, -103.3371)
+
+[node name="Visuel" type="MeshInstance3D" parent="Falaises/Bloc71"]
+mesh = SubResource("mesh_b71")
+
+[node name="Collision" type="CollisionShape3D" parent="Falaises/Bloc71"]
+shape = SubResource("shape_b71")
+
+[node name="Bloc72" type="StaticBody3D" parent="Falaises"]
+transform = Transform3D(0.1191, -0.0154, 0.9928, -0.0184, 0.9997, 0.0177, -0.9927, -0.0203, 0.1188, 212.1706, 29.5655, -73.4104)
+
+[node name="Visuel" type="MeshInstance3D" parent="Falaises/Bloc72"]
+mesh = SubResource("mesh_b72")
+
+[node name="Collision" type="CollisionShape3D" parent="Falaises/Bloc72"]
+shape = SubResource("shape_b72")
+
+[node name="Bloc73" type="StaticBody3D" parent="Falaises"]
+transform = Transform3D(-0.1255, -0.0235, 0.9918, -0.0134, 0.9997, 0.0220, -0.9920, -0.0105, -0.1258, 207.9618, 39.5148, -41.0304)
+
+[node name="Visuel" type="MeshInstance3D" parent="Falaises/Bloc73"]
+mesh = SubResource("mesh_b73")
+
+[node name="Collision" type="CollisionShape3D" parent="Falaises/Bloc73"]
+shape = SubResource("shape_b73")
+
+[node name="Bloc74" type="StaticBody3D" parent="Falaises"]
+transform = Transform3D(-0.0811, 0.0351, 0.9961, -0.0230, 0.9990, -0.0371, -0.9964, -0.0259, -0.0802, 211.9348, 22.9398, -10.7991)
+
+[node name="Visuel" type="MeshInstance3D" parent="Falaises/Bloc74"]
+mesh = SubResource("mesh_b74")
+
+[node name="Collision" type="CollisionShape3D" parent="Falaises/Bloc74"]
+shape = SubResource("shape_b74")
+
+[node name="Bloc75" type="StaticBody3D" parent="Falaises"]
+transform = Transform3D(0.0735, 0.0035, 0.9973, -0.0325, 0.9995, -0.0011, -0.9968, -0.0323, 0.0735, 209.8347, 39.6940, 21.4986)
+
+[node name="Visuel" type="MeshInstance3D" parent="Falaises/Bloc75"]
+mesh = SubResource("mesh_b75")
+
+[node name="Collision" type="CollisionShape3D" parent="Falaises/Bloc75"]
+shape = SubResource("shape_b75")
+
+[node name="Bloc76" type="StaticBody3D" parent="Falaises"]
+transform = Transform3D(0.0316, 0.0391, 0.9987, 0.0057, 0.9992, -0.0393, -0.9995, 0.0069, 0.0314, 209.6671, 22.0157, 54.7969)
+
+[node name="Visuel" type="MeshInstance3D" parent="Falaises/Bloc76"]
+mesh = SubResource("mesh_b76")
+
+[node name="Collision" type="CollisionShape3D" parent="Falaises/Bloc76"]
+shape = SubResource("shape_b76")
+
+[node name="Bloc77" type="StaticBody3D" parent="Falaises"]
+transform = Transform3D(-0.0796, 0.0133, 0.9967, -0.0224, 0.9996, -0.0151, -0.9966, -0.0235, -0.0793, 208.0603, 35.7309, 87.4292)
+
+[node name="Visuel" type="MeshInstance3D" parent="Falaises/Bloc77"]
+mesh = SubResource("mesh_b77")
+
+[node name="Collision" type="CollisionShape3D" parent="Falaises/Bloc77"]
+shape = SubResource("shape_b77")
+
+[node name="Bloc78" type="StaticBody3D" parent="Falaises"]
+transform = Transform3D(0.0679, -0.0272, 0.9973, 0.0250, 0.9994, 0.0256, -0.9974, 0.0232, 0.0685, 211.0591, 24.7799, 121.3572)
+
+[node name="Visuel" type="MeshInstance3D" parent="Falaises/Bloc78"]
+mesh = SubResource("mesh_b78")
+
+[node name="Collision" type="CollisionShape3D" parent="Falaises/Bloc78"]
+shape = SubResource("shape_b78")
+
+[node name="Bloc79" type="StaticBody3D" parent="Falaises"]
+transform = Transform3D(0.0344, -0.0336, 0.9988, -0.0354, 0.9988, 0.0348, -0.9988, -0.0366, 0.0332, 211.4008, 27.3163, 150.8016)
+
+[node name="Visuel" type="MeshInstance3D" parent="Falaises/Bloc79"]
+mesh = SubResource("mesh_b79")
+
+[node name="Collision" type="CollisionShape3D" parent="Falaises/Bloc79"]
+shape = SubResource("shape_b79")
+
+[node name="Bloc80" type="StaticBody3D" parent="Falaises"]
+transform = Transform3D(0.0523, 0.0275, 0.9983, -0.0076, 0.9996, -0.0271, -0.9986, -0.0062, 0.0525, 212.5159, 32.1825, 180.0881)
+
+[node name="Visuel" type="MeshInstance3D" parent="Falaises/Bloc80"]
+mesh = SubResource("mesh_b80")
+
+[node name="Collision" type="CollisionShape3D" parent="Falaises/Bloc80"]
+shape = SubResource("shape_b80")
+
+[node name="Bloc81" type="StaticBody3D" parent="Falaises"]
+transform = Transform3D(0.0817, -0.0258, 0.9963, 0.0073, 0.9997, 0.0253, -0.9966, 0.0052, 0.0818, 209.0030, 28.1181, 207.7207)
+
+[node name="Visuel" type="MeshInstance3D" parent="Falaises/Bloc81"]
+mesh = SubResource("mesh_b81")
+
+[node name="Collision" type="CollisionShape3D" parent="Falaises/Bloc81"]
+shape = SubResource("shape_b81")
+
+[node name="Bloc82" type="StaticBody3D" parent="Falaises"]
+transform = Transform3D(0.0394, -0.0151, 0.9991, -0.0458, 0.9988, 0.0169, -0.9982, -0.0465, 0.0387, 210.0426, 29.5207, 238.7384)
+
+[node name="Visuel" type="MeshInstance3D" parent="Falaises/Bloc82"]
+mesh = SubResource("mesh_b82")
+
+[node name="Collision" type="CollisionShape3D" parent="Falaises/Bloc82"]
+shape = SubResource("shape_b82")
+
+[node name="Bloc83" type="StaticBody3D" parent="Falaises"]
+transform = Transform3D(-0.0925, 0.0324, 0.9952, -0.0426, 0.9984, -0.0365, -0.9948, -0.0458, -0.0910, 198.5347, 14.6133, -196.3706)
+
+[node name="Visuel" type="MeshInstance3D" parent="Falaises/Bloc83"]
+mesh = SubResource("mesh_b83")
+
+[node name="Collision" type="CollisionShape3D" parent="Falaises/Bloc83"]
+shape = SubResource("shape_b83")
+
+[node name="Bloc84" type="StaticBody3D" parent="Falaises"]
+transform = Transform3D(-0.1004, 0.0449, 0.9939, -0.0390, 0.9980, -0.0490, -0.9942, -0.0437, -0.0985, 201.1979, 10.6367, -171.4152)
+
+[node name="Visuel" type="MeshInstance3D" parent="Falaises/Bloc84"]
+mesh = SubResource("mesh_b84")
+
+[node name="Collision" type="CollisionShape3D" parent="Falaises/Bloc84"]
+shape = SubResource("shape_b84")
+
+[node name="Bloc85" type="StaticBody3D" parent="Falaises"]
+transform = Transform3D(0.1557, -0.0182, 0.9876, 0.0447, 0.9989, 0.0114, -0.9868, 0.0424, 0.1564, 200.8065, 11.2830, -144.2211)
+
+[node name="Visuel" type="MeshInstance3D" parent="Falaises/Bloc85"]
+mesh = SubResource("mesh_b85")
+
+[node name="Collision" type="CollisionShape3D" parent="Falaises/Bloc85"]
+shape = SubResource("shape_b85")
+
+[node name="Bloc86" type="StaticBody3D" parent="Falaises"]
+transform = Transform3D(0.1084, 0.0003, 0.9941, 0.0191, 0.9998, -0.0023, -0.9939, 0.0192, 0.1084, 203.9768, 7.7761, -115.3816)
+
+[node name="Visuel" type="MeshInstance3D" parent="Falaises/Bloc86"]
+mesh = SubResource("mesh_b86")
+
+[node name="Collision" type="CollisionShape3D" parent="Falaises/Bloc86"]
+shape = SubResource("shape_b86")
+
+[node name="Bloc87" type="StaticBody3D" parent="Falaises"]
+transform = Transform3D(-0.0848, -0.0554, 0.9949, -0.0391, 0.9979, 0.0522, -0.9956, -0.0345, -0.0868, 203.5045, 17.8602, -87.5193)
+
+[node name="Visuel" type="MeshInstance3D" parent="Falaises/Bloc87"]
+mesh = SubResource("mesh_b87")
+
+[node name="Collision" type="CollisionShape3D" parent="Falaises/Bloc87"]
+shape = SubResource("shape_b87")
+
+[node name="Bloc88" type="StaticBody3D" parent="Falaises"]
+transform = Transform3D(0.0782, 0.0126, 0.9969, 0.0208, 0.9997, -0.0143, -0.9967, 0.0218, 0.0779, 202.2732, 8.6390, -58.1903)
+
+[node name="Visuel" type="MeshInstance3D" parent="Falaises/Bloc88"]
+mesh = SubResource("mesh_b88")
+
+[node name="Collision" type="CollisionShape3D" parent="Falaises/Bloc88"]
+shape = SubResource("shape_b88")
+
+[node name="Bloc89" type="StaticBody3D" parent="Falaises"]
+transform = Transform3D(0.0734, 0.0342, 0.9967, -0.0522, 0.9982, -0.0304, -0.9959, -0.0498, 0.0750, 200.2177, 18.6192, -34.9196)
+
+[node name="Visuel" type="MeshInstance3D" parent="Falaises/Bloc89"]
+mesh = SubResource("mesh_b89")
+
+[node name="Collision" type="CollisionShape3D" parent="Falaises/Bloc89"]
+shape = SubResource("shape_b89")
+
+[node name="Bloc90" type="StaticBody3D" parent="Falaises"]
+transform = Transform3D(-0.1202, -0.0059, 0.9927, -0.0278, 0.9996, 0.0026, -0.9924, -0.0273, -0.1203, 198.3501, 18.8595, -11.3526)
+
+[node name="Visuel" type="MeshInstance3D" parent="Falaises/Bloc90"]
+mesh = SubResource("mesh_b90")
+
+[node name="Collision" type="CollisionShape3D" parent="Falaises/Bloc90"]
+shape = SubResource("shape_b90")
+
+[node name="Bloc91" type="StaticBody3D" parent="Falaises"]
+transform = Transform3D(0.0966, 0.0386, 0.9946, 0.0154, 0.9991, -0.0403, -0.9952, 0.0192, 0.0959, 201.5590, 14.0345, 10.4062)
+
+[node name="Visuel" type="MeshInstance3D" parent="Falaises/Bloc91"]
+mesh = SubResource("mesh_b91")
+
+[node name="Collision" type="CollisionShape3D" parent="Falaises/Bloc91"]
+shape = SubResource("shape_b91")
+
+[node name="Bloc92" type="StaticBody3D" parent="Falaises"]
+transform = Transform3D(0.1460, -0.0156, 0.9892, -0.0083, 0.9998, 0.0170, -0.9893, -0.0107, 0.1458, 201.8017, 18.3325, 33.5185)
+
+[node name="Visuel" type="MeshInstance3D" parent="Falaises/Bloc92"]
+mesh = SubResource("mesh_b92")
+
+[node name="Collision" type="CollisionShape3D" parent="Falaises/Bloc92"]
+shape = SubResource("shape_b92")
+
+[node name="Bloc93" type="StaticBody3D" parent="Falaises"]
+transform = Transform3D(0.1354, 0.0038, 0.9908, -0.0314, 0.9995, 0.0005, -0.9903, -0.0311, 0.1355, 194.9638, 8.4569, 58.0714)
+
+[node name="Visuel" type="MeshInstance3D" parent="Falaises/Bloc93"]
+mesh = SubResource("mesh_b93")
+
+[node name="Collision" type="CollisionShape3D" parent="Falaises/Bloc93"]
+shape = SubResource("shape_b93")
+
+[node name="Bloc94" type="StaticBody3D" parent="Falaises"]
+transform = Transform3D(-0.1414, -0.0051, 0.9899, -0.0327, 0.9995, 0.0004, -0.9894, -0.0323, -0.1415, 199.2292, 15.7633, 81.5500)
+
+[node name="Visuel" type="MeshInstance3D" parent="Falaises/Bloc94"]
+mesh = SubResource("mesh_b94")
+
+[node name="Collision" type="CollisionShape3D" parent="Falaises/Bloc94"]
+shape = SubResource("shape_b94")
+
+[node name="Bloc95" type="StaticBody3D" parent="Falaises"]
+transform = Transform3D(-0.1297, -0.0528, 0.9901, -0.0498, 0.9977, 0.0467, -0.9903, -0.0433, -0.1320, 200.8336, 4.7801, 106.7535)
+
+[node name="Visuel" type="MeshInstance3D" parent="Falaises/Bloc95"]
+mesh = SubResource("mesh_b95")
+
+[node name="Collision" type="CollisionShape3D" parent="Falaises/Bloc95"]
+shape = SubResource("shape_b95")
+
+[node name="Bloc96" type="StaticBody3D" parent="Falaises"]
+transform = Transform3D(-0.1238, 0.0429, 0.9914, 0.0243, 0.9989, -0.0402, -0.9920, 0.0192, -0.1247, 197.8268, 4.8381, 129.6771)
+
+[node name="Visuel" type="MeshInstance3D" parent="Falaises/Bloc96"]
+mesh = SubResource("mesh_b96")
+
+[node name="Collision" type="CollisionShape3D" parent="Falaises/Bloc96"]
+shape = SubResource("shape_b96")
+
+[node name="Bloc97" type="StaticBody3D" parent="Falaises"]
+transform = Transform3D(-0.0781, -0.0475, 0.9958, 0.0172, 0.9987, 0.0490, -0.9968, 0.0210, -0.0772, 196.0052, 6.7940, 158.2249)
+
+[node name="Visuel" type="MeshInstance3D" parent="Falaises/Bloc97"]
+mesh = SubResource("mesh_b97")
+
+[node name="Collision" type="CollisionShape3D" parent="Falaises/Bloc97"]
+shape = SubResource("shape_b97")
+
+[node name="Bloc98" type="StaticBody3D" parent="Falaises"]
+transform = Transform3D(0.1325, -0.0424, 0.9903, -0.0084, 0.9990, 0.0439, -0.9912, -0.0141, 0.1320, 204.0394, 10.8020, 187.2834)
+
+[node name="Visuel" type="MeshInstance3D" parent="Falaises/Bloc98"]
+mesh = SubResource("mesh_b98")
+
+[node name="Collision" type="CollisionShape3D" parent="Falaises/Bloc98"]
+shape = SubResource("shape_b98")
+
+[node name="Bloc99" type="StaticBody3D" parent="Falaises"]
+transform = Transform3D(0.0586, 0.0343, 0.9977, -0.0431, 0.9986, -0.0318, -0.9973, -0.0412, 0.0600, 199.0771, 9.8300, 214.0292)
+
+[node name="Visuel" type="MeshInstance3D" parent="Falaises/Bloc99"]
+mesh = SubResource("mesh_b99")
+
+[node name="Collision" type="CollisionShape3D" parent="Falaises/Bloc99"]
+shape = SubResource("shape_b99")
+
+[node name="Bloc100" type="StaticBody3D" parent="Falaises"]
+transform = Transform3D(0.0405, 0.0436, 0.9982, -0.0491, 0.9979, -0.0416, -0.9980, -0.0474, 0.0426, -210.4540, 39.3804, -197.1570)
+
+[node name="Visuel" type="MeshInstance3D" parent="Falaises/Bloc100"]
+mesh = SubResource("mesh_b100")
+
+[node name="Collision" type="CollisionShape3D" parent="Falaises/Bloc100"]
+shape = SubResource("shape_b100")
+
+[node name="Bloc101" type="StaticBody3D" parent="Falaises"]
+transform = Transform3D(0.0098, 0.0322, 0.9994, -0.0458, 0.9984, -0.0318, -0.9989, -0.0455, 0.0113, -211.5763, 29.3431, -169.1753)
+
+[node name="Visuel" type="MeshInstance3D" parent="Falaises/Bloc101"]
+mesh = SubResource("mesh_b101")
+
+[node name="Collision" type="CollisionShape3D" parent="Falaises/Bloc101"]
+shape = SubResource("shape_b101")
+
+[node name="Bloc102" type="StaticBody3D" parent="Falaises"]
+transform = Transform3D(-0.1435, 0.0086, 0.9896, -0.0249, 0.9996, -0.0122, -0.9893, -0.0264, -0.1433, -213.3755, 28.0619, -138.0026)
+
+[node name="Visuel" type="MeshInstance3D" parent="Falaises/Bloc102"]
+mesh = SubResource("mesh_b102")
+
+[node name="Collision" type="CollisionShape3D" parent="Falaises/Bloc102"]
+shape = SubResource("shape_b102")
+
+[node name="Bloc103" type="StaticBody3D" parent="Falaises"]
+transform = Transform3D(-0.0285, 0.0334, 0.9990, 0.0467, 0.9984, -0.0320, -0.9985, 0.0458, -0.0300, -212.6497, 27.2494, -105.7224)
+
+[node name="Visuel" type="MeshInstance3D" parent="Falaises/Bloc103"]
+mesh = SubResource("mesh_b103")
+
+[node name="Collision" type="CollisionShape3D" parent="Falaises/Bloc103"]
+shape = SubResource("shape_b103")
+
+[node name="Bloc104" type="StaticBody3D" parent="Falaises"]
+transform = Transform3D(-0.1418, -0.0155, 0.9898, -0.0261, 0.9996, 0.0119, -0.9896, -0.0241, -0.1421, -208.1524, 30.7162, -78.8117)
+
+[node name="Visuel" type="MeshInstance3D" parent="Falaises/Bloc104"]
+mesh = SubResource("mesh_b104")
+
+[node name="Collision" type="CollisionShape3D" parent="Falaises/Bloc104"]
+shape = SubResource("shape_b104")
+
+[node name="Bloc105" type="StaticBody3D" parent="Falaises"]
+transform = Transform3D(-0.1354, -0.0177, 0.9906, 0.0201, 0.9996, 0.0206, -0.9906, 0.0227, -0.1350, -209.4094, 31.1325, -47.8106)
+
+[node name="Visuel" type="MeshInstance3D" parent="Falaises/Bloc105"]
+mesh = SubResource("mesh_b105")
+
+[node name="Collision" type="CollisionShape3D" parent="Falaises/Bloc105"]
+shape = SubResource("shape_b105")
+
+[node name="Bloc106" type="StaticBody3D" parent="Falaises"]
+transform = Transform3D(-0.0871, -0.0467, 0.9951, -0.0317, 0.9985, 0.0441, -0.9957, -0.0277, -0.0885, -209.8620, 27.6812, -15.9618)
+
+[node name="Visuel" type="MeshInstance3D" parent="Falaises/Bloc106"]
+mesh = SubResource("mesh_b106")
+
+[node name="Collision" type="CollisionShape3D" parent="Falaises/Bloc106"]
+shape = SubResource("shape_b106")
+
+[node name="Bloc107" type="StaticBody3D" parent="Falaises"]
+transform = Transform3D(0.0567, 0.0480, 0.9972, 0.0401, 0.9979, -0.0503, -0.9976, 0.0428, 0.0546, -207.9511, 22.1103, 12.4318)
+
+[node name="Visuel" type="MeshInstance3D" parent="Falaises/Bloc107"]
+mesh = SubResource("mesh_b107")
+
+[node name="Collision" type="CollisionShape3D" parent="Falaises/Bloc107"]
+shape = SubResource("shape_b107")
+
+[node name="Bloc108" type="StaticBody3D" parent="Falaises"]
+transform = Transform3D(-0.0657, -0.0074, 0.9978, -0.0278, 0.9996, 0.0056, -0.9975, -0.0274, -0.0659, -208.1699, 23.3302, 39.8396)
+
+[node name="Visuel" type="MeshInstance3D" parent="Falaises/Bloc108"]
+mesh = SubResource("mesh_b108")
+
+[node name="Collision" type="CollisionShape3D" parent="Falaises/Bloc108"]
+shape = SubResource("shape_b108")
+
+[node name="Bloc109" type="StaticBody3D" parent="Falaises"]
+transform = Transform3D(-0.0851, 0.0296, 0.9959, 0.0293, 0.9992, -0.0272, -0.9959, 0.0268, -0.0859, -212.8137, 26.0312, 68.8312)
+
+[node name="Visuel" type="MeshInstance3D" parent="Falaises/Bloc109"]
+mesh = SubResource("mesh_b109")
+
+[node name="Collision" type="CollisionShape3D" parent="Falaises/Bloc109"]
+shape = SubResource("shape_b109")
+
+[node name="Bloc110" type="StaticBody3D" parent="Falaises"]
+transform = Transform3D(0.0950, -0.0238, 0.9952, -0.0267, 0.9993, 0.0264, -0.9951, -0.0290, 0.0943, -210.5270, 28.7229, 97.1308)
+
+[node name="Visuel" type="MeshInstance3D" parent="Falaises/Bloc110"]
+mesh = SubResource("mesh_b110")
+
+[node name="Collision" type="CollisionShape3D" parent="Falaises/Bloc110"]
+shape = SubResource("shape_b110")
+
+[node name="Bloc111" type="StaticBody3D" parent="Falaises"]
+transform = Transform3D(0.0779, -0.0267, 0.9966, 0.0028, 0.9996, 0.0266, -0.9970, 0.0007, 0.0779, -213.8329, 25.1209, 124.8120)
+
+[node name="Visuel" type="MeshInstance3D" parent="Falaises/Bloc111"]
+mesh = SubResource("mesh_b111")
+
+[node name="Collision" type="CollisionShape3D" parent="Falaises/Bloc111"]
+shape = SubResource("shape_b111")
+
+[node name="Bloc112" type="StaticBody3D" parent="Falaises"]
+transform = Transform3D(0.0091, 0.0331, 0.9994, 0.0356, 0.9988, -0.0334, -0.9993, 0.0359, 0.0079, -212.2724, 40.7736, 156.5656)
+
+[node name="Visuel" type="MeshInstance3D" parent="Falaises/Bloc112"]
+mesh = SubResource("mesh_b112")
+
+[node name="Collision" type="CollisionShape3D" parent="Falaises/Bloc112"]
+shape = SubResource("shape_b112")
+
+[node name="Bloc113" type="StaticBody3D" parent="Falaises"]
+transform = Transform3D(-0.1475, 0.0153, 0.9889, 0.0450, 0.9989, -0.0087, -0.9880, 0.0432, -0.1480, -209.9983, 23.7747, 183.9728)
+
+[node name="Visuel" type="MeshInstance3D" parent="Falaises/Bloc113"]
+mesh = SubResource("mesh_b113")
+
+[node name="Collision" type="CollisionShape3D" parent="Falaises/Bloc113"]
+shape = SubResource("shape_b113")
+
+[node name="Bloc114" type="StaticBody3D" parent="Falaises"]
+transform = Transform3D(-0.0525, -0.0509, 0.9973, 0.0144, 0.9986, 0.0517, -0.9985, 0.0170, -0.0517, -208.1786, 33.2093, 212.6676)
+
+[node name="Visuel" type="MeshInstance3D" parent="Falaises/Bloc114"]
+mesh = SubResource("mesh_b114")
+
+[node name="Collision" type="CollisionShape3D" parent="Falaises/Bloc114"]
+shape = SubResource("shape_b114")
+
+[node name="Bloc115" type="StaticBody3D" parent="Falaises"]
+transform = Transform3D(0.0926, -0.0265, 0.9954, 0.0104, 0.9996, 0.0257, -0.9956, 0.0080, 0.0928, -200.1090, 9.6519, -196.0144)
+
+[node name="Visuel" type="MeshInstance3D" parent="Falaises/Bloc115"]
+mesh = SubResource("mesh_b115")
+
+[node name="Collision" type="CollisionShape3D" parent="Falaises/Bloc115"]
+shape = SubResource("shape_b115")
+
+[node name="Bloc116" type="StaticBody3D" parent="Falaises"]
+transform = Transform3D(0.0397, 0.0144, 0.9991, -0.0442, 0.9989, -0.0127, -0.9982, -0.0436, 0.0403, -201.4543, 16.6738, -166.8584)
+
+[node name="Visuel" type="MeshInstance3D" parent="Falaises/Bloc116"]
+mesh = SubResource("mesh_b116")
+
+[node name="Collision" type="CollisionShape3D" parent="Falaises/Bloc116"]
+shape = SubResource("shape_b116")
+
+[node name="Bloc117" type="StaticBody3D" parent="Falaises"]
+transform = Transform3D(0.0330, 0.0048, 0.9994, 0.0146, 0.9999, -0.0053, -0.9994, 0.0147, 0.0329, -201.9536, 4.8870, -138.1695)
+
+[node name="Visuel" type="MeshInstance3D" parent="Falaises/Bloc117"]
+mesh = SubResource("mesh_b117")
+
+[node name="Collision" type="CollisionShape3D" parent="Falaises/Bloc117"]
+shape = SubResource("shape_b117")
+
+[node name="Bloc118" type="StaticBody3D" parent="Falaises"]
+transform = Transform3D(-0.0522, -0.0111, 0.9986, -0.0470, 0.9989, 0.0086, -0.9975, -0.0464, -0.0527, -196.0329, 8.1302, -110.7750)
+
+[node name="Visuel" type="MeshInstance3D" parent="Falaises/Bloc118"]
+mesh = SubResource("mesh_b118")
+
+[node name="Collision" type="CollisionShape3D" parent="Falaises/Bloc118"]
+shape = SubResource("shape_b118")
+
+[node name="Bloc119" type="StaticBody3D" parent="Falaises"]
+transform = Transform3D(-0.1549, -0.0190, 0.9878, -0.0317, 0.9994, 0.0143, -0.9874, -0.0291, -0.1554, -196.5604, 10.3965, -84.2774)
+
+[node name="Visuel" type="MeshInstance3D" parent="Falaises/Bloc119"]
+mesh = SubResource("mesh_b119")
+
+[node name="Collision" type="CollisionShape3D" parent="Falaises/Bloc119"]
+shape = SubResource("shape_b119")
+
+[node name="Bloc120" type="StaticBody3D" parent="Falaises"]
+transform = Transform3D(0.1208, -0.0435, 0.9917, 0.0081, 0.9990, 0.0429, -0.9926, 0.0029, 0.1210, -203.5513, 10.6730, -59.1748)
+
+[node name="Visuel" type="MeshInstance3D" parent="Falaises/Bloc120"]
+mesh = SubResource("mesh_b120")
+
+[node name="Collision" type="CollisionShape3D" parent="Falaises/Bloc120"]
+shape = SubResource("shape_b120")
+
+[node name="Bloc121" type="StaticBody3D" parent="Falaises"]
+transform = Transform3D(-0.0460, 0.0409, 0.9981, -0.0430, 0.9982, -0.0429, -0.9980, -0.0449, -0.0441, -197.4408, 4.1314, -33.8880)
+
+[node name="Visuel" type="MeshInstance3D" parent="Falaises/Bloc121"]
+mesh = SubResource("mesh_b121")
+
+[node name="Collision" type="CollisionShape3D" parent="Falaises/Bloc121"]
+shape = SubResource("shape_b121")
+
+[node name="Bloc122" type="StaticBody3D" parent="Falaises"]
+transform = Transform3D(0.1075, -0.0293, 0.9938, -0.0453, 0.9984, 0.0344, -0.9932, -0.0487, 0.1060, -201.4336, 6.5783, -4.8766)
+
+[node name="Visuel" type="MeshInstance3D" parent="Falaises/Bloc122"]
+mesh = SubResource("mesh_b122")
+
+[node name="Collision" type="CollisionShape3D" parent="Falaises/Bloc122"]
+shape = SubResource("shape_b122")
+
+[node name="Bloc123" type="StaticBody3D" parent="Falaises"]
+transform = Transform3D(0.1192, 0.0402, 0.9921, 0.0497, 0.9977, -0.0464, -0.9916, 0.0549, 0.1169, -202.6440, 18.9833, 21.4559)
+
+[node name="Visuel" type="MeshInstance3D" parent="Falaises/Bloc123"]
+mesh = SubResource("mesh_b123")
+
+[node name="Collision" type="CollisionShape3D" parent="Falaises/Bloc123"]
+shape = SubResource("shape_b123")
+
+[node name="Bloc124" type="StaticBody3D" parent="Falaises"]
+transform = Transform3D(-0.0658, 0.0224, 0.9976, 0.0409, 0.9990, -0.0197, -0.9970, 0.0395, -0.0666, -202.3324, 13.8273, 45.7344)
+
+[node name="Visuel" type="MeshInstance3D" parent="Falaises/Bloc124"]
+mesh = SubResource("mesh_b124")
+
+[node name="Collision" type="CollisionShape3D" parent="Falaises/Bloc124"]
+shape = SubResource("shape_b124")
+
+[node name="Bloc125" type="StaticBody3D" parent="Falaises"]
+transform = Transform3D(-0.1022, -0.0360, 0.9941, -0.0295, 0.9990, 0.0332, -0.9943, -0.0259, -0.1032, -196.0065, 10.2100, 73.4145)
+
+[node name="Visuel" type="MeshInstance3D" parent="Falaises/Bloc125"]
+mesh = SubResource("mesh_b125")
+
+[node name="Collision" type="CollisionShape3D" parent="Falaises/Bloc125"]
+shape = SubResource("shape_b125")
+
+[node name="Bloc126" type="StaticBody3D" parent="Falaises"]
+transform = Transform3D(-0.1483, 0.0279, 0.9885, -0.0322, 0.9989, -0.0330, -0.9884, -0.0367, -0.1473, -199.7635, 9.5036, 103.0210)
+
+[node name="Visuel" type="MeshInstance3D" parent="Falaises/Bloc126"]
+mesh = SubResource("mesh_b126")
+
+[node name="Collision" type="CollisionShape3D" parent="Falaises/Bloc126"]
+shape = SubResource("shape_b126")
+
+[node name="Bloc127" type="StaticBody3D" parent="Falaises"]
+transform = Transform3D(0.0344, -0.0059, 0.9994, 0.0365, 0.9993, 0.0046, -0.9987, 0.0364, 0.0346, -201.2556, 14.3192, 132.1166)
+
+[node name="Visuel" type="MeshInstance3D" parent="Falaises/Bloc127"]
+mesh = SubResource("mesh_b127")
+
+[node name="Collision" type="CollisionShape3D" parent="Falaises/Bloc127"]
+shape = SubResource("shape_b127")
+
+[node name="Bloc128" type="StaticBody3D" parent="Falaises"]
+transform = Transform3D(0.0416, 0.0018, 0.9991, -0.0336, 0.9994, -0.0004, -0.9986, -0.0336, 0.0416, -199.1006, 7.7884, 159.5533)
+
+[node name="Visuel" type="MeshInstance3D" parent="Falaises/Bloc128"]
+mesh = SubResource("mesh_b128")
+
+[node name="Collision" type="CollisionShape3D" parent="Falaises/Bloc128"]
+shape = SubResource("shape_b128")
+
+[node name="Bloc129" type="StaticBody3D" parent="Falaises"]
+transform = Transform3D(-0.0876, -0.0073, 0.9961, -0.0335, 0.9994, 0.0044, -0.9956, -0.0330, -0.0878, -197.7945, 7.5699, 186.4531)
+
+[node name="Visuel" type="MeshInstance3D" parent="Falaises/Bloc129"]
+mesh = SubResource("mesh_b129")
+
+[node name="Collision" type="CollisionShape3D" parent="Falaises/Bloc129"]
+shape = SubResource("shape_b129")
+
+[node name="Bloc130" type="StaticBody3D" parent="Falaises"]
+transform = Transform3D(-0.0948, 0.0020, 0.9955, 0.0165, 0.9999, -0.0005, -0.9954, 0.0163, -0.0948, -198.0650, 9.4938, 211.6012)
+
+[node name="Visuel" type="MeshInstance3D" parent="Falaises/Bloc130"]
+mesh = SubResource("mesh_b130")
+
+[node name="Collision" type="CollisionShape3D" parent="Falaises/Bloc130"]
+shape = SubResource("shape_b130")
+
+[node name="Bloc131" type="StaticBody3D" parent="Falaises"]
+transform = Transform3D(-0.0036, -0.0467, 0.9989, 0.0004, 0.9989, 0.0467, -1.0000, 0.0006, -0.0036, -195.7268, 15.3423, 238.2500)
+
+[node name="Visuel" type="MeshInstance3D" parent="Falaises/Bloc131"]
+mesh = SubResource("mesh_b131")
+
+[node name="Collision" type="CollisionShape3D" parent="Falaises/Bloc131"]
+shape = SubResource("shape_b131")
