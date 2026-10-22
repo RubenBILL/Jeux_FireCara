@@ -17,6 +17,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 shape = SubResource("SphereShape3D_feu")
 
 [node name="Flammes" parent="." unique_id=2105247429 instance=ExtResource("2_flammes")]
+visibility_range_fade_mode = 0
 
 [node name="Lumiere" type="OmniLight3D" parent="." unique_id=534250805]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2, 0)
@@ -28,4 +29,4 @@ omni_range = 12.0
 [node name="Son" type="FmodEventEmitter3D" parent="." unique_id=247428462]
 event_name = "event:/flammes"
 event_guid = "{8b592ac5-346f-4982-baad-ca8dab777a1d}"
-volume = 3.0
+volume = 5.0

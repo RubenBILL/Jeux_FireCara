@@ -27,6 +27,7 @@
 [ext_resource type="PackedScene" uid="uid://bxx72mcyjpnpb" path="res://Feu.tscn" id="25_odiih"]
 
 [sub_resource type="Environment" id="Environment_yyc5p"]
+fog_enabled = true
 fog_light_color = Color(0.5176471, 0.5529412, 0.60784316, 1)
 fog_light_energy = 0.77
 fog_density = 0.05
@@ -603,17 +604,17 @@ script = ExtResource("23_ocrje")
 [node name="Dialogues" type="Node" parent="." unique_id=650525710]
 script = ExtResource("24_2lyvr")
 
-[node name="Feu" parent="." unique_id=1083611661 instance=ExtResource("25_odiih")]
+[node name="Feu_1" parent="." unique_id=1083611661 instance=ExtResource("25_odiih")]
 transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, -12.473412, 0.49512196, 96.87163)
 coller_au_sol = false
 allume_au_demarrage = true
 
-[node name="Feu2" parent="." unique_id=2034903503 instance=ExtResource("25_odiih")]
+[node name="Feu_2" parent="." unique_id=2034903503 instance=ExtResource("25_odiih")]
 transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, -157.74802, 0.49512196, -97.629036)
 coller_au_sol = false
 allume_au_demarrage = true
 
-[node name="Feu3" parent="." unique_id=785217527 instance=ExtResource("25_odiih")]
+[node name="Feu_3" parent="." unique_id=785217527 instance=ExtResource("25_odiih")]
 transform = Transform3D(15, 0, 0, 0, 15, 0, 0, 0, 15, 119.5862, 6.0794096, -102.91609)
 coller_au_sol = false
 allume_au_demarrage = true
