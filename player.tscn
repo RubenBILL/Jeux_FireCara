@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" path="res://Poudre.tscn" id="2_i3pqv"]
 [ext_resource type="PackedScene" uid="uid://csq78dkd2bheu" path="res://extincteur/Fire Extinguisher by dook - LtrzDvRya9.glb" id="2_onrkg"]
 [ext_resource type="Script" uid="uid://bup1df1iaxv7m" path="res://jet_poudre.gd" id="4_hqtel"]
+[ext_resource type="PackedScene" uid="uid://b50opj7kfwhvq" path="res://assets/Low Poly Characters Bundle-glb/Cowgirl.glb" id="5_sweqy"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_4ptq1"]
 radius = 0.3
@@ -23,6 +24,7 @@ script = ExtResource("1_4flbx")
 shape = SubResource("CapsuleShape3D_4ptq1")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=9403960]
+visible = false
 mesh = SubResource("CapsuleMesh_4ptq1")
 
 [node name="Head" type="Node3D" parent="." unique_id=527671526]
@@ -63,3 +65,6 @@ fmod_parameters/pas/id = 1937817998102140828
 fmod_parameters/pas = "plancher"
 fmod_parameters/pas/labels = PackedStringArray("plancher", "herbeMarche", "herbeCours")
 fmod_parameters/pas/variant_type = 4
+
+[node name="Skin" parent="." unique_id=1214689590 instance=ExtResource("5_sweqy")]
+transform = Transform3D(-105, 0, -1.5854559e-05, 0, 105, 0, 1.5854559e-05, 0, -105, 0, -0.84, 0.2)
