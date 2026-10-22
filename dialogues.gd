@@ -15,6 +15,7 @@ var _en_cours: bool = false
 
 func _ready() -> void:
 	await get_tree().process_frame
+	_etat_musique("sonChill")
 	lancer(0, delai_scenario_1)
 
 ## Lance le dialogue numéro `index` (0 = scénario 1) après `delai` secondes.
@@ -26,7 +27,11 @@ func lancer(index: int, delai: float = 0.0) -> void:
 	while _en_cours:
 		await get_tree().create_timer(0.2).timeout
 	_en_cours = true
+	if index == 0:
+		_etat_musique("sonTransition")
 	await _jouer(evenements[index])
+	if index == 0:
+		_etat_musique("sonPeur")
 	if index == 0 and son_apres_scenario_1 != "":
 		var lieu: Node = get_node_or_null("../Player") if son_chez_le_joueur else get_node_or_null("../Feu_1")
 		await _jouer(son_apres_scenario_1, lieu, volume_cause)
@@ -49,3 +54,10 @@ func _jouer(chemin: String, lieu: Node = null, volume: float = 1.0) -> void:
 	await get_tree().create_timer(duree + 0.3).timeout
 	em.stop()
 	em.queue_free()
+
+## Change l'état de la musique : "sonChill", "sonTransition" ou "sonPeur".
+func _etat_musique(etat: String) -> void:
+	var musique := get_node_or_null("../Player/Musique")
+	if musique != null:
+		musique.set_parameter("etatMusique", etat)
+		print("[Musique] ", etat)

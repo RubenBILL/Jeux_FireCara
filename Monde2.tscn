@@ -481,7 +481,7 @@ transform = Transform3D(-0.99540126, 0, -0.09579285, 0, 1, 0, 0.09579285, 0, -0.
 event_name = "event:/musique"
 event_guid = "{513bb764-ee57-4367-9718-382a55983e02}"
 autoplay = true
-volume = 0.3
+volume = 0.9
 fmod_parameters/etatMusique/id = 5950344720888052481
 fmod_parameters/etatMusique = "sonChill"
 fmod_parameters/etatMusique/labels = PackedStringArray("sonChill", "sonTransition", "sonPeur")
@@ -602,7 +602,6 @@ shape = SubResource("ConcavePolygonShape3D_kh1ih")
 offset_right = 40.0
 offset_bottom = 23.0
 script = ExtResource("23_ocrje")
-duree = 40.0
 
 [node name="Dialogues" type="Node" parent="." unique_id=650525710]
 script = ExtResource("24_2lyvr")
@@ -627,7 +626,7 @@ coller_au_sol = false
 
 [node name="SequenceFeux" type="Node" parent="." unique_id=867291715]
 script = ExtResource("26_gcqqr")
-delai_premier_feu = 5.0
+delai_premier_feu = 52.0
 
 [node name="PopupCause" type="CanvasLayer" parent="." unique_id=957853329]
 script = ExtResource("27_uw8um")
