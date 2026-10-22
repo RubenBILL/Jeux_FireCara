@@ -28,6 +28,7 @@
 [ext_resource type="Script" uid="uid://d4ifrctrvrmlw" path="res://sequence_feux.gd" id="26_gcqqr"]
 [ext_resource type="Script" uid="uid://dofbopds8ykc7" path="res://popup_cause.gd" id="27_uw8um"]
 [ext_resource type="Script" uid="uid://cmmi0o4w52q77" path="res://fin_partie.gd" id="28_wbcbr"]
+[ext_resource type="Script" uid="uid://bfid0n8jrdtyx" path="res://jauge_poudre.gd" id="29_5rx6l"]
 
 [sub_resource type="Environment" id="Environment_yyc5p"]
 fog_light_color = Color(0.5176471, 0.5529412, 0.60784316, 1)
@@ -633,6 +634,9 @@ script = ExtResource("27_uw8um")
 
 [node name="FinPartie" type="CanvasLayer" parent="." unique_id=1727179462]
 script = ExtResource("28_wbcbr")
+
+[node name="JaugePoudre" type="CanvasLayer" parent="." unique_id=1192021034]
+script = ExtResource("29_5rx6l")
 
 [editable path="MapForetRelief"]
 [editable path="Log cabin by Poly by Google - f7uccD5iyz0"]

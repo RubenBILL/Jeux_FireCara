@@ -6,11 +6,17 @@ extends CharacterBody3D
 @export var gravity: float = 9.8
 @export var sprint_multiplier: float = 2.8
 
+@export var reservoir_max: float = 100.0
+## Poudre consommée par seconde (100 / 2 = 50 s de jet continu).
+@export var conso_poudre: float = 5.0
+
 @onready var poudre: GPUParticles3D = $Head/Camera3D/Poudre
 @onready var pas: FmodEventEmitter3D = $FmodEventEmitter3D
 @onready var son_poudre: FmodEventEmitter3D = $Head/Camera3D/SonPoudre
 @onready var jet: Area3D = $Head/Camera3D/ZoneJet
 
+var reservoir: float = 100.0
+var _son_jet: bool = false
 
 var _marche := false
 
@@ -20,6 +26,8 @@ var pitch: float = 0.0
 
 func _ready() -> void:
 	head = $Head
+	add_to_group("joueur")
+	reservoir = reservoir_max
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 
 func _unhandled_input(event) -> void:
@@ -62,14 +70,19 @@ func _physics_process(delta: float) -> void:
 		velocity.y -= gravity * delta
 	elif Input.is_action_pressed("jump"):
 		velocity.y = jump_velocity
-		
-	
-	poudre.emitting = Input.is_action_pressed("spray")
-	jet.debit = 1.0 if Input.is_action_pressed("spray") else 0.0
-	if Input.is_action_just_pressed("spray"):
+
+	# extincteur : tant qu'il reste de la poudre
+	var arrose := Input.is_action_pressed("spray") and reservoir > 0.0
+	if arrose:
+		reservoir = maxf(reservoir - conso_poudre * delta, 0.0)
+	poudre.emitting = arrose
+	jet.debit = 1.0 if arrose else 0.0
+	if arrose and not _son_jet:
 		son_poudre.play()
-	elif Input.is_action_just_released("spray"):
+		_son_jet = true
+	elif not arrose and _son_jet:
 		son_poudre.stop()
+		_son_jet = false
 
 	move_and_slide()
 
@@ -86,4 +99,3 @@ func _physics_process(delta: float) -> void:
 	elif not marche_maintenant and _marche:
 		pas.stop()
 	_marche = marche_maintenant
-	
