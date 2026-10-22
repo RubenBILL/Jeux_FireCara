@@ -17,7 +17,7 @@ func _ready() -> void:
 
 	_panneau = PanelContainer.new()
 	var fond := StyleBoxFlat.new()
-	fond.bg_color = Color(0, 0, 0, 0.82)
+	fond.bg_color = Color8(200, 16, 46)
 	fond.set_corner_radius_all(14)
 	_panneau.add_theme_stylebox_override("panel", fond)
 	centre.add_child(_panneau)
@@ -33,7 +33,7 @@ func _ready() -> void:
 
 	_titre = Label.new()
 	_titre.add_theme_font_size_override("font_size", 34)
-	_titre.add_theme_color_override("font_color", Color(1.0, 0.6, 0.2))
+	_titre.add_theme_color_override("font_color", Color(1, 1, 1))
 	boite.add_child(_titre)
 
 	_texte = Label.new()

@@ -45,6 +45,7 @@ func _process(delta: float) -> void:
 		direction.y += 1.0
 
 	if Input.is_key_pressed(KEY_UP):
+		
 		direction.y -= 1.0
 	
 	direction += ArduinoManager.joystick

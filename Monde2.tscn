@@ -29,8 +29,11 @@
 [ext_resource type="Script" uid="uid://dofbopds8ykc7" path="res://popup_cause.gd" id="27_uw8um"]
 [ext_resource type="Script" uid="uid://cmmi0o4w52q77" path="res://fin_partie.gd" id="28_wbcbr"]
 [ext_resource type="Script" uid="uid://bfid0n8jrdtyx" path="res://jauge_poudre.gd" id="29_5rx6l"]
+[ext_resource type="PackedScene" uid="uid://cg8uar3ywa84e" path="res://Construction sign by koen caspers - 4v9QhryzBwT.glb" id="30_30vrd"]
+[ext_resource type="PackedScene" uid="uid://dm26rfhjatolj" path="res://Bulldozer by Poly by Google - ddxtaegI3HQ.glb" id="31_wvhus"]
 
 [sub_resource type="Environment" id="Environment_yyc5p"]
+fog_enabled = true
 fog_light_color = Color(0.5176471, 0.5529412, 0.60784316, 1)
 fog_light_energy = 0.77
 fog_density = 0.05
@@ -467,6 +470,20 @@ data = PackedVector3Array(-422.6468, 442.05, -350, -422.6468, 420, -350, -422.64
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_kh1ih"]
 data = PackedVector3Array(-363.75, 137.2906, -155, -363.75, 322.70938, -155, -346.25, 137.2906, -155, -363.75, 322.70938, -155, -346.25, 322.70938, -155, -346.25, 137.2906, -155, -363.75, 322.70938, -155, -363.75, 322.70938, -255, -346.25, 322.70938, -155, -363.75, 322.70938, -255, -346.25, 322.70938, -255, -346.25, 322.70938, -155, -363.75, 322.70938, -255, -363.75, 137.2906, -255, -346.25, 322.70938, -255, -363.75, 137.2906, -255, -346.25, 137.2906, -255, -346.25, 322.70938, -255, -363.75, 137.2906, -255, -363.75, 137.2906, -155, -346.25, 137.2906, -255, -363.75, 137.2906, -155, -346.25, 137.2906, -155, -346.25, 137.2906, -255, -346.25, 137.2906, -155, -346.25, 322.70938, -155, -346.25, 137.2906, -255, -346.25, 322.70938, -155, -346.25, 322.70938, -255, -346.25, 137.2906, -255, -363.75, 137.2906, -255, -363.75, 322.70938, -255, -363.75, 137.2906, -155, -363.75, 322.70938, -255, -363.75, 322.70938, -155, -363.75, 137.2906, -155)
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_4ptq1"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_yyc5p"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_0ntl1"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_75rte"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_5sd02"]
+size = Vector3(30.801285, 21.2641, 19.732056)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_aakwe"]
+size = Vector3(1.3571472, 1.050293, 1)
+
 [node name="Node3D" type="Node3D" unique_id=945960596]
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=157902654]
@@ -581,6 +598,11 @@ transform = Transform3D(3.9946723, 0, 0, 0, 3.9946723, 0, 0, 0, 3.9946723, -163.
 [node name="Boombox by Poly by Google - 4hZk7Fg8KiP" parent="." unique_id=2063426836 instance=ExtResource("20_odiih")]
 transform = Transform3D(-0.4087196, 0.05109812, 0.14386086, 0.05194154, 0.43315262, -0.0062822127, -0.1435585, 0.011241534, -0.4118534, -171.2677, -2.7669728, -84.99252)
 
+[node name="SonBoombox" type="FmodEventEmitter3D" parent="Boombox by Poly by Google - 4hZk7Fg8KiP" unique_id=110333914]
+event_name = "event:/jeunes"
+event_guid = "{0d99df5a-6cb8-4555-aa5f-763bd6b44134}"
+autoplay = true
+
 [node name="Log cabin by Poly by Google - f7uccD5iyz0" parent="." unique_id=1959960924 instance=ExtResource("21_4nnqn")]
 transform = Transform3D(-0.009968965, 0, -0.00078722567, 0, 0.01, 0, 0.00078722567, 0, -0.009968965, -131.15518, -0.21887124, 146.13336)
 
@@ -608,11 +630,10 @@ script = ExtResource("23_ocrje")
 script = ExtResource("24_2lyvr")
 
 [node name="Feu_1" parent="." unique_id=1083611661 instance=ExtResource("25_odiih")]
-transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, -12.473412, 0.49512196, 96.87163)
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, -14.400786, 0.49512196, 96.87163)
 titre_popup = "Incendie malveillant"
 texte_popup = "Environ 25 % des départs de feux seraient volontaires selon les estimations présentées par l’Office national des forêts (ONF) et les services de l’État. "
 coller_au_sol = false
-allume_au_demarrage = true
 
 [node name="Feu_2" parent="." unique_id=2034903503 instance=ExtResource("25_odiih")]
 transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, -157.74802, 0.49512196, -97.629036)
@@ -638,6 +659,56 @@ script = ExtResource("28_wbcbr")
 
 [node name="JaugePoudre" type="CanvasLayer" parent="." unique_id=1192021034]
 script = ExtResource("29_5rx6l")
+
+[node name="Construction sign by koen caspers - 4v9QhryzBwT" parent="." unique_id=792035108 instance=ExtResource("30_30vrd")]
+transform = Transform3D(-0.20382097, 0, -0.9790082, 0, 1, 0, 0.9790082, 0, -0.20382097, 95.55308, 1.7951903, -107.80666)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Construction sign by koen caspers - 4v9QhryzBwT" unique_id=186540397]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Construction sign by koen caspers - 4v9QhryzBwT/StaticBody3D" unique_id=60842945]
+shape = SubResource("BoxShape3D_4ptq1")
+
+[node name="Construction sign by koen caspers - 4v9QhryzBwT2" parent="." unique_id=2050165396 instance=ExtResource("30_30vrd")]
+transform = Transform3D(0.09402393, 0, -0.99556994, 0, 1, 0, 0.99556994, 0, 0.09402393, 95.347374, 1.8115106, -106.43736)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Construction sign by koen caspers - 4v9QhryzBwT2" unique_id=945346523]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Construction sign by koen caspers - 4v9QhryzBwT2/StaticBody3D" unique_id=1040824127]
+shape = SubResource("BoxShape3D_yyc5p")
+
+[node name="Construction sign by koen caspers - 4v9QhryzBwT3" parent="." unique_id=1764301783 instance=ExtResource("30_30vrd")]
+transform = Transform3D(0.13121289, 0, -0.9913542, 0, 1, 0, 0.9913542, 0, 0.13121289, 94.975136, 1.9237118, -104.83005)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Construction sign by koen caspers - 4v9QhryzBwT3" unique_id=866422899]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Construction sign by koen caspers - 4v9QhryzBwT3/StaticBody3D" unique_id=2042677537]
+shape = SubResource("BoxShape3D_0ntl1")
+
+[node name="Construction sign by koen caspers - 4v9QhryzBwT4" parent="." unique_id=2131328606 instance=ExtResource("30_30vrd")]
+transform = Transform3D(0.09168886, 0, -0.9957877, 0, 1, 0, 0.9957877, 0, 0.09168886, 94.79599, 1.8767762, -103.33316)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Construction sign by koen caspers - 4v9QhryzBwT4" unique_id=1447619141]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Construction sign by koen caspers - 4v9QhryzBwT4/StaticBody3D" unique_id=466066514]
+shape = SubResource("BoxShape3D_75rte")
+
+[node name="Bulldozer by Poly by Google - ddxtaegI3HQ" parent="." unique_id=1579876745 instance=ExtResource("31_wvhus")]
+transform = Transform3D(0.13678035, 0.014167744, -0.28469878, 0.006421622, 0.31554526, 0.01878798, 0.28497878, -0.013910461, 0.13622265, 100.09421, 0.9932647, -93.87756)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Bulldozer by Poly by Google - ddxtaegI3HQ" unique_id=661713350]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bulldozer by Poly by Google - ddxtaegI3HQ/StaticBody3D" unique_id=1011940661]
+transform = Transform3D(1.0000001, -5.401671e-07, 0, 1.4901161e-08, 1.000002, 0, -5.9604645e-08, -2.2165477e-07, 1, 1.7917023, 10.132057, -0.077178955)
+shape = SubResource("BoxShape3D_5sd02")
+
+[node name="Bulldozer by Poly by Google - ddxtaegI3HQ2" parent="." unique_id=115113824 instance=ExtResource("31_wvhus")]
+transform = Transform3D(0.40571952, 0, 0, 0, 0.40571952, 0, 0, 0, 0.40571952, 147.36366, -0.021996677, -120.447136)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Bulldozer by Poly by Google - ddxtaegI3HQ2" unique_id=760380088]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bulldozer by Poly by Google - ddxtaegI3HQ2/StaticBody3D" unique_id=974465721]
+transform = Transform3D(23, 0, 0, 0, 23, 0, 0, 0, 23, 1.6033325, 9.186092, 0)
+shape = SubResource("BoxShape3D_aakwe")
 
 [editable path="MapForetRelief"]
 [editable path="Log cabin by Poly by Google - f7uccD5iyz0"]
