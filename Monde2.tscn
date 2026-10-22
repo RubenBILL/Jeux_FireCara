@@ -27,6 +27,7 @@
 [ext_resource type="PackedScene" uid="uid://bxx72mcyjpnpb" path="res://Feu.tscn" id="25_odiih"]
 [ext_resource type="Script" uid="uid://d4ifrctrvrmlw" path="res://sequence_feux.gd" id="26_gcqqr"]
 [ext_resource type="Script" uid="uid://dofbopds8ykc7" path="res://popup_cause.gd" id="27_uw8um"]
+[ext_resource type="Script" uid="uid://cmmi0o4w52q77" path="res://fin_partie.gd" id="28_wbcbr"]
 
 [sub_resource type="Environment" id="Environment_yyc5p"]
 fog_light_color = Color(0.5176471, 0.5529412, 0.60784316, 1)
@@ -601,6 +602,7 @@ shape = SubResource("ConcavePolygonShape3D_kh1ih")
 offset_right = 40.0
 offset_bottom = 23.0
 script = ExtResource("23_ocrje")
+duree = 40.0
 
 [node name="Dialogues" type="Node" parent="." unique_id=650525710]
 script = ExtResource("24_2lyvr")
@@ -625,10 +627,13 @@ coller_au_sol = false
 
 [node name="SequenceFeux" type="Node" parent="." unique_id=867291715]
 script = ExtResource("26_gcqqr")
-delai_premier_feu = 52.0
+delai_premier_feu = 5.0
 
 [node name="PopupCause" type="CanvasLayer" parent="." unique_id=957853329]
 script = ExtResource("27_uw8um")
+
+[node name="FinPartie" type="CanvasLayer" parent="." unique_id=1727179462]
+script = ExtResource("28_wbcbr")
 
 [editable path="MapForetRelief"]
 [editable path="Log cabin by Poly by Google - f7uccD5iyz0"]
