@@ -10,6 +10,7 @@ signal button_changed(pressed: bool)
 signal sensor_changed(value: int)                 # trame "sensor:<0..1023>" (potentiomètre / capteur A0)
 signal encoder_changed(position: int, delta: int) # trame "enc:<position>" (encodeur rotatif, manette de Tom)
 signal message_received(key: String, value: String) # TOUTE trame "clé:valeur" reçue (pour vos propres capteurs)
+signal pot_changed(value: float)  # trame "pot:<0..1023>", ramenée à 0.0..1.0
 
 # ── Constantes de pairing ──────────────────────────────
 const DISCOVER_MSG  := "DISCOVER"
@@ -43,6 +44,9 @@ var sensor_value: int = 0
 var encoder_position: int = 0
 var button_pressed: bool = false
 var joystick := Vector2.ZERO
+var pot_value: float = 0.0
+var tilt := Vector2.ZERO        # x = roll, y = pitch, en degrés
+var _last_servo: int = -1
 var _debug: bool = OS.get_environment("ARDUINO_DEBUG") == "1"  # ARDUINO_DEBUG=1 : affiche le détail du pairing
 
 func _ready() -> void:
@@ -64,6 +68,7 @@ func start_pairing() -> void:
 	_wasPaired = false
 	paired_port = ""
 	encoder_position = 0  # l'Arduino repart de 0 à chaque reset (ouverture du port)
+	_last_servo = -1
 	_buffer = ""          # oublie les morceaux de trame de l'ancienne connexion
 	##print("[Pairing] Démarrage du scan des ports...")
 	var ports: Dictionary = serial.list_ports()
@@ -208,6 +213,15 @@ func _parse_message(msg: String) -> void:
 				joystick = Vector2(xy[0].to_int(), xy[1].to_int()) / 512.0
 				if joystick.length() < 0.15:
 					joystick = Vector2.ZERO
+
+		"pot":
+			pot_value = clampf(value.to_int() / 1023.0, 0.0, 1.0)
+			emit_signal("pot_changed", pot_value)
+		"tilt":
+			var rp := value.split(",")
+			if rp.size() == 2:
+				tilt = Vector2(rp[0].to_float(), rp[1].to_float())
+
 		"pong":
 			print("[Arduino] Latence mesurée : ", Time.get_ticks_msec() - parts[1].to_int(), " ms")
 		"ack":
@@ -218,6 +232,9 @@ func _parse_message(msg: String) -> void:
 
 # ══ API PUBLIQUE ══════════════════════════════════════
 
+func est_connecte() -> bool:
+	return _paired
+	
 func send_led(on: bool) -> void:
 	_send("led:" + ("1" if on else "0"))
 
@@ -226,6 +243,13 @@ func send_blink(times: int) -> void:
 
 func send_ping() -> void:
 	_send("ping:" + str(Time.get_ticks_msec()))
+
+func send_servo(angle: int) -> void:
+	angle = clampi(angle, 0, 180)
+	if angle == _last_servo:
+		return  # n'envoie que si l'angle change (évite de saturer le port à 60 Hz)
+	_last_servo = angle
+	_send("servo:" + str(angle))
 
 var _warned_unpaired: bool = false  # un seul avertissement par période « non appairé » (sinon 60 lignes/s)
 
