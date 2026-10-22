@@ -67,4 +67,4 @@ fmod_parameters/pas/labels = PackedStringArray("plancher", "herbeMarche", "herbe
 fmod_parameters/pas/variant_type = 4
 
 [node name="Skin" parent="." unique_id=1214689590 instance=ExtResource("5_sweqy")]
-transform = Transform3D(-105, 0, -1.5854559e-05, 0, 105, 0, 1.5854559e-05, 0, -105, 0, -0.84, 0.2)
+transform = Transform3D(-105, 0, -1.5854559e-05, 0, 105, 0, 1.5854559e-05, 0, -105, 0, -0.84, 0.6)

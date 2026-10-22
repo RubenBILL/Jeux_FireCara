@@ -612,6 +612,7 @@ transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, -12.473412, 0.49512196, 96
 titre_popup = "Incendie malveillant"
 texte_popup = "Environ 25 % des départs de feux seraient volontaires selon les estimations présentées par l’Office national des forêts (ONF) et les services de l’État. "
 coller_au_sol = false
+allume_au_demarrage = true
 
 [node name="Feu_2" parent="." unique_id=2034903503 instance=ExtResource("25_odiih")]
 transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, -157.74802, 0.49512196, -97.629036)
