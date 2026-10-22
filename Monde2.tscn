@@ -4,27 +4,29 @@
 [ext_resource type="PackedScene" path="res://map_foret_relief/map_foret_relief.tscn" id="2_a3gl2"]
 [ext_resource type="Script" uid="uid://bnpf256mb2hca" path="res://musique.gd" id="2_kh1ih"]
 [ext_resource type="ArrayMesh" uid="uid://bcethlj84x3m0" path="res://Grass_Wispy_Short.obj" id="3_otb34"]
-[ext_resource type="ArrayMesh" uid="uid://css8xfs1e0sev" path="res://Stylized Nature MegaKit[Standard]/OBJ/Grass_Common_Short.obj" id="4_cf2qy"]
-[ext_resource type="ArrayMesh" uid="uid://qai3jgqswhkh" path="res://Stylized Nature MegaKit[Standard]/OBJ/Bush_Common.obj" id="5_a3gl2"]
-[ext_resource type="ArrayMesh" uid="uid://rvg1d15vm6aj" path="res://Stylized Nature MegaKit[Standard]/OBJ/Mushroom_Common.obj" id="6_otb34"]
-[ext_resource type="ArrayMesh" uid="uid://dm80h60jmw0iv" path="res://Stylized Nature MegaKit[Standard]/OBJ/Flower_3_Group.obj" id="7_cf2qy"]
-[ext_resource type="Texture2D" uid="uid://ct0vyfoecpd2b" path="res://Stylized Nature MegaKit[Standard]/Textures/Leaf_Pine_C.png" id="9_qskou"]
+[ext_resource type="ArrayMesh" uid="uid://css8xfs1e0sev" path="res://assets/Stylized Nature MegaKit[Standard]/OBJ/Grass_Common_Short.obj" id="4_cf2qy"]
+[ext_resource type="ArrayMesh" uid="uid://qai3jgqswhkh" path="res://assets/Stylized Nature MegaKit[Standard]/OBJ/Bush_Common.obj" id="5_a3gl2"]
+[ext_resource type="ArrayMesh" uid="uid://rvg1d15vm6aj" path="res://assets/Stylized Nature MegaKit[Standard]/OBJ/Mushroom_Common.obj" id="6_otb34"]
+[ext_resource type="ArrayMesh" uid="uid://dm80h60jmw0iv" path="res://assets/Stylized Nature MegaKit[Standard]/OBJ/Flower_3_Group.obj" id="7_cf2qy"]
+[ext_resource type="Texture2D" uid="uid://ct0vyfoecpd2b" path="res://assets/Stylized Nature MegaKit[Standard]/Textures/Leaf_Pine_C.png" id="9_qskou"]
 [ext_resource type="Texture2D" uid="uid://c8r4shqr76ejr" path="res://glTF/Bark_NormalTree.png" id="9_w2e6b"]
 [ext_resource type="Texture2D" uid="uid://bpc6j43pff5xx" path="res://glTF/Bark_DeadTree.png" id="10_oy88t"]
 [ext_resource type="Script" uid="uid://buxy17jh4c8gk" path="res://arbres_collision.gd" id="10_qskou"]
 [ext_resource type="Texture2D" uid="uid://bv3yorg2vry0y" path="res://glTF/Bark_TwistedTree.png" id="11_m3xsr"]
 [ext_resource type="Material" uid="uid://nbbdrx8vma80" path="res://demo/assets/materials/M_rock23_tp.tres" id="12_qskou"]
-[ext_resource type="ArrayMesh" uid="uid://cyvnibyqju82w" path="res://Stylized Nature MegaKit[Standard]/OBJ/Rock_Medium_2.obj" id="13_oy88t"]
-[ext_resource type="PackedScene" uid="uid://v2swya88y2ow" path="res://Campfire by Poly by Google - 0vzzmM-t8CP.glb" id="15_haudm"]
+[ext_resource type="ArrayMesh" uid="uid://cyvnibyqju82w" path="res://assets/Stylized Nature MegaKit[Standard]/OBJ/Rock_Medium_2.obj" id="13_oy88t"]
+[ext_resource type="PackedScene" uid="uid://v2swya88y2ow" path="res://assets/Campfire by Poly by Google - 0vzzmM-t8CP.glb" id="15_haudm"]
 [ext_resource type="PackedScene" uid="uid://can5qc4qny3mv" path="res://Tent by Quaternius - 5Q7qIrfDxA.glb" id="16_4nnqn"]
-[ext_resource type="PackedScene" uid="uid://bh8j7fvociof6" path="res://Backpack by Quaternius - 2g9Jm7kvIU.glb" id="17_kh1ih"]
-[ext_resource type="PackedScene" uid="uid://ch8x36ogjpfqg" path="res://Bedroll by Kenney - 12PaVpBY04.glb" id="18_ocrje"]
-[ext_resource type="PackedScene" uid="uid://wmkniauo0png" path="res://Bedroll by Kenney - efwd5fjuMU.glb" id="19_2lyvr"]
-[ext_resource type="PackedScene" uid="uid://d0peglpij0axt" path="res://Boombox by Poly by Google - 4hZk7Fg8KiP.glb" id="20_odiih"]
+[ext_resource type="PackedScene" uid="uid://bh8j7fvociof6" path="res://assets/Backpack by Quaternius - 2g9Jm7kvIU.glb" id="17_kh1ih"]
+[ext_resource type="PackedScene" uid="uid://ch8x36ogjpfqg" path="res://assets/Bedroll by Kenney - 12PaVpBY04.glb" id="18_ocrje"]
+[ext_resource type="PackedScene" uid="uid://wmkniauo0png" path="res://assets/Bedroll by Kenney - efwd5fjuMU.glb" id="19_2lyvr"]
+[ext_resource type="PackedScene" uid="uid://d0peglpij0axt" path="res://assets/Boombox by Poly by Google - 4hZk7Fg8KiP.glb" id="20_odiih"]
 [ext_resource type="PackedScene" uid="uid://vkh3h5ajyq0m" path="res://Log cabin by Poly by Google - f7uccD5iyz0.glb" id="21_4nnqn"]
+[ext_resource type="Script" uid="uid://cllsdru4fr4v2" path="res://timer_partie.gd" id="23_ocrje"]
+[ext_resource type="Script" uid="uid://2nsbb457t7km" path="res://dialogues.gd" id="24_2lyvr"]
+[ext_resource type="PackedScene" uid="uid://bxx72mcyjpnpb" path="res://Feu.tscn" id="25_odiih"]
 
 [sub_resource type="Environment" id="Environment_yyc5p"]
-fog_enabled = true
 fog_light_color = Color(0.5176471, 0.5529412, 0.60784316, 1)
 fog_light_energy = 0.77
 fog_density = 0.05
@@ -540,7 +542,7 @@ material_overlay = SubResource("StandardMaterial3D_pu1m5")
 multimesh = SubResource("MultiMesh_qskou")
 
 [node name="FmodBankLoader" type="FmodBankLoader" parent="." unique_id=799907655]
-bank_paths = ["res://FMOD Banks/Desktop/Master.bank"]
+bank_paths = ["res://FMOD Banks/Desktop/Master.strings.bank", "res://FMOD Banks/Desktop/Master.bank"]
 
 [node name="Campfire by Poly by Google - 0vzzmM-t8CP" parent="." unique_id=549168088 instance=ExtResource("15_haudm")]
 transform = Transform3D(1.4327981, 0.10873725, 0, -0.10873725, 1.4327981, 0, 0, 0, 1.4369184, -168.04309, -2.7439532, -92.43725)
@@ -590,6 +592,31 @@ shape = SubResource("ConcavePolygonShape3D_4nnqn")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Log cabin by Poly by Google - f7uccD5iyz0/Door/StaticBody3D" unique_id=313462050]
 shape = SubResource("ConcavePolygonShape3D_kh1ih")
+
+[node name="HUD" type="CanvasLayer" parent="." unique_id=1427806271]
+
+[node name="Label" type="Label" parent="HUD" unique_id=1201351031]
+offset_right = 40.0
+offset_bottom = 23.0
+script = ExtResource("23_ocrje")
+
+[node name="Dialogues" type="Node" parent="." unique_id=650525710]
+script = ExtResource("24_2lyvr")
+
+[node name="Feu" parent="." unique_id=1083611661 instance=ExtResource("25_odiih")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, -12.473412, 0.49512196, 96.87163)
+coller_au_sol = false
+allume_au_demarrage = true
+
+[node name="Feu2" parent="." unique_id=2034903503 instance=ExtResource("25_odiih")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, -157.74802, 0.49512196, -97.629036)
+coller_au_sol = false
+allume_au_demarrage = true
+
+[node name="Feu3" parent="." unique_id=785217527 instance=ExtResource("25_odiih")]
+transform = Transform3D(15, 0, 0, 0, 15, 0, 0, 0, 15, 119.5862, 6.0794096, -102.91609)
+coller_au_sol = false
+allume_au_demarrage = true
 
 [editable path="MapForetRelief"]
 [editable path="Log cabin by Poly by Google - f7uccD5iyz0"]

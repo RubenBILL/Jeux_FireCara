@@ -9,6 +9,8 @@ extends CharacterBody3D
 @onready var poudre: GPUParticles3D = $Head/Camera3D/Poudre
 @onready var pas: FmodEventEmitter3D = $FmodEventEmitter3D
 @onready var son_poudre: FmodEventEmitter3D = $Head/Camera3D/SonPoudre
+@onready var jet: Area3D = $Head/Camera3D/ZoneJet
+
 
 var _marche := false
 
@@ -63,6 +65,7 @@ func _physics_process(delta: float) -> void:
 		
 	
 	poudre.emitting = Input.is_action_pressed("spray")
+	jet.debit = 1.0 if Input.is_action_pressed("spray") else 0.0
 	if Input.is_action_just_pressed("spray"):
 		son_poudre.play()
 	elif Input.is_action_just_released("spray"):
