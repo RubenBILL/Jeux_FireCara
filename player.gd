@@ -9,11 +9,17 @@ extends CharacterBody3D
 # ── Manette Arduino ──
 const ZONE_MORTE_TILT := 8.0     # degrés d'inclinaison ignorés (manette posée à plat)
 const VITESSE_TILT := 2.0        # rad/s quand la manette est inclinée à ~45°
+const POT_REPOS := 0.15     # valeur mesurée gâchette relâchée
+const POT_APPUYE := 0.05    # valeur mesurée gâchette enfoncée à fond
+const GACHETTE_ON := 0.5    # on tire à partir de 50 % d'appui
+const GACHETTE_OFF := 0.3   # on arrête en dessous de 30 % (l'écart évite que le jet clignote)
 
 @onready var poudre: GPUParticles3D = $Head/Camera3D/Poudre
 @onready var pas: FmodEventEmitter3D = $FmodEventEmitter3D
 @onready var son_poudre: FmodEventEmitter3D = $Head/Camera3D/SonPoudre
 
+var _pot_lisse := POT_REPOS
+var _gachette := false
 var _marche := false
 var _spray_avant := false
 
@@ -60,8 +66,8 @@ func _physics_process(delta: float) -> void:
 	var joy := Vector2.ZERO
 	if arduino:
 		joy = ArduinoManager.joystick
-		direction += right * joy.x
-		direction += forward * -joy.y   # si avancer/reculer est inversé : enlève le "-"
+		direction += right * joy.y      # gauche/droite (joystick monté tourné d'un quart de tour)
+		direction += forward * joy.x   # avant/arrière
 
 	# garde la vitesse analogique du joystick (le clavier reste à 1 maximum)
 	direction = direction.limit_length(1.0)
@@ -89,13 +95,23 @@ func _physics_process(delta: float) -> void:
 	elif Input.is_action_pressed("jump"):
 		velocity.y = jump_velocity
 
-	# extincteur : touche spray ou bouton du joystick
-	var spray := Input.is_action_pressed("spray") or (arduino and ArduinoManager.button_pressed)
-	poudre.emitting = spray
+			# extincteur : touche spray, ou gâchette (potentiomètre) de la manette
+	var intensite := 1.0
 	if arduino:
-		poudre.amount_ratio = lerpf(0.2, 1.0, ArduinoManager.pot_value)  # intensité au potentiomètre
+		_pot_lisse = lerpf(_pot_lisse, ArduinoManager.pot_value, 0.3)   # lissage du bruit
+		var appui := clampf(inverse_lerp(POT_REPOS, POT_APPUYE, _pot_lisse), 0.0, 1.0)
+		if appui > GACHETTE_ON:
+			_gachette = true
+		elif appui < GACHETTE_OFF:
+			_gachette = false
+		intensite = clampf(inverse_lerp(GACHETTE_OFF, 1.0, appui), 0.0, 1.0)
 	else:
-		poudre.amount_ratio = 1.0
+		_gachette = false
+
+	var spray := Input.is_action_pressed("spray") or _gachette
+	poudre.emitting = spray
+	poudre.amount_ratio = lerpf(0.1, 1.0, intensite) if _gachette else 1.0   # quantité de poudre
+	poudre.speed_scale = lerpf(0.6, 1.5, intensite) if _gachette else 1.0    # vitesse du jet
 	if spray and not _spray_avant:
 		son_poudre.play()
 	elif not spray and _spray_avant:

@@ -102,6 +102,12 @@ func _scan_ports(port_list: Array) -> void:
 		var port_name: String = port_info["port_name"]
 		_dbg("[Pairing] Test de : " + port_name)
 		serial.set_port(port_name)
+		serial.set_baud_rate(BAUD_RATE)
+		serial.set_data_bits(8)
+		serial.set_parity(false)       # sans parité
+		serial.set_stop_bits(1)
+		serial.set_flow_control(0)     # 0 = aucun contrôle de flux
+		serial.set_timeout(10)
 
 		if not serial.open():
 			_dbg("[Pairing]   → impossible d'ouvrir")
@@ -110,12 +116,13 @@ func _scan_ports(port_list: Array) -> void:
 		serial.clear_buffer()
 
 		# Attend que l'Arduino finisse son boot après l'ouverture du port
-		await get_tree().create_timer(.5).timeout
+		await get_tree().create_timer(.0).timeout
 
 		# Envoie DISCOVER plusieurs fois au cas où le premier serait perdu
 		for i in range(3):
 			serial.writeline(DISCOVER_MSG)
 			await get_tree().create_timer(0.1).timeout
+			_dbg("[Pairing]   octets disponibles : %d" % serial.bytes_available())
 			var response := _read_all_available()
 			_dbg("[Pairing]   tentative %d → '%s'" % [i + 1, response.strip_edges()])
 			if ACK_PREFIX in response:
@@ -211,7 +218,7 @@ func _parse_message(msg: String) -> void:
 			var xy := value.split(",")
 			if xy.size() == 2:
 				joystick = Vector2(xy[0].to_int(), xy[1].to_int()) / 512.0
-				if joystick.length() < 0.15:
+				if joystick.length() < 0.25:
 					joystick = Vector2.ZERO
 
 		"pot":
