@@ -1,6 +1,6 @@
 extends CharacterBody3D
 
-@export var speed: float = 5.0
+@export var speed: float = 15.0
 @export var mouse_sensitivity: float = 0.003
 @export var jump_velocity: float = 4.5
 @export var gravity: float = 9.8
@@ -148,7 +148,7 @@ func _physics_process(delta: float) -> void:
 	elif Input.is_action_pressed("jump"):
 		velocity.y = jump_velocity
 
-	# extincteur : touche spray, ou gâchette (potentiomètre) de la manette
+		# extincteur : touche spray ou gâchette (potentiomètre), tant qu'il reste de la poudre
 	var intensite := 1.0
 	if arduino:
 		_pot_lisse = lerpf(_pot_lisse, ArduinoManager.pot_value, 0.3)   # lissage du bruit
@@ -160,22 +160,16 @@ func _physics_process(delta: float) -> void:
 		intensite = clampf(inverse_lerp(GACHETTE_OFF, 1.0, appui), 0.0, 1.0)
 	else:
 		_gachette = false
+	var force := intensite if _gachette else 1.0   # au clavier : jet à pleine puissance
 
-	var spray := Input.is_action_pressed("spray") or _gachette
-	poudre.emitting = spray
-	poudre.amount_ratio = lerpf(0.1, 1.0, intensite) if _gachette else 1.0   # quantité de poudre
-	poudre.speed_scale = lerpf(0.6, 1.5, intensite) if _gachette else 1.0    # vitesse du jet
-	if spray and not _spray_avant:
-		son_poudre.play()
-	elif not spray and _spray_avant:
-		son_poudre.stop()
-	_spray_avant = spray
-	# extincteur : tant qu'il reste de la poudre
-	var arrose := Input.is_action_pressed("spray") and reservoir > 0.0
+	var demande := Input.is_action_pressed("spray") or _gachette
+	var arrose := demande and reservoir > 0.0
 	if arrose:
-		reservoir = maxf(reservoir - conso_poudre * delta, 0.0)
+		reservoir = maxf(reservoir - conso_poudre * force * delta, 0.0)   # un jet faible consomme moins
 	poudre.emitting = arrose
-	jet.debit = 1.0 if arrose else 0.0
+	poudre.amount_ratio = lerpf(0.1, 1.0, force)   # quantité de poudre
+	poudre.speed_scale = lerpf(0.6, 1.5, force)    # vitesse du jet
+	jet.debit = force if arrose else 0.0           # efficacité sur le feu, proportionnelle au jet
 	if arrose and not _son_jet:
 		son_poudre.play()
 		_son_jet = true
