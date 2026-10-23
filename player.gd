@@ -7,12 +7,15 @@ extends CharacterBody3D
 @export var sprint_multiplier: float = 2.8
 
 # ── Manette Arduino ──
-const ZONE_MORTE_TILT := 8.0     # degrés d'inclinaison ignorés (manette posée à plat)
-const VITESSE_TILT := 2.0        # rad/s quand la manette est inclinée à ~45°
+const ZONE_MORTE_TILT := 12.0    # degrés d'inclinaison gauche/droite ignorés
+const VITESSE_TILT := 2.0        # vitesse de rotation gauche/droite (rad/s à ~45°)
+const GAIN_PITCH := 1.5          # incliner de 20° fait regarder 30° plus haut ou plus bas
 const POT_REPOS := 0.15     # valeur mesurée gâchette relâchée
 const POT_APPUYE := 0.05    # valeur mesurée gâchette enfoncée à fond
 const GACHETTE_ON := 0.5    # on tire à partir de 50 % d'appui
 const GACHETTE_OFF := 0.3   # on arrête en dessous de 30 % (l'écart évite que le jet clignote)
+const GAIN_YAW := 2.0            # 2.0 = pivoter la manette de 45° fait tourner la caméra de 90°
+const PITCH_SUR_X := false       # true si incliner la manette avant/arrière fait varier le PREMIER nombre de tilt
 
 @onready var poudre: GPUParticles3D = $Head/Camera3D/Poudre
 @onready var pas: FmodEventEmitter3D = $FmodEventEmitter3D
@@ -22,6 +25,13 @@ var _pot_lisse := POT_REPOS
 var _gachette := false
 var _marche := false
 var _spray_avant := false
+var _tilt_neutre := Vector2.ZERO
+var _tilt_calibre := false
+var _temps_connecte := 0.0
+var _gyro_biais := 0.0
+var _somme_gyro := 0.0
+var _nb_gyro := 0
+
 
 var _label := ""
 var head: Node3D
@@ -36,8 +46,9 @@ func _unhandled_input(event) -> void:
 		# rotation horizontale du corps
 		rotate_y(-event.relative.x * mouse_sensitivity)
 		# rotation verticale de la tête
-		pitch = clamp(pitch - event.relative.y * mouse_sensitivity, deg_to_rad(-89), deg_to_rad(89))
-		head.rotation.x = pitch
+		if not ArduinoManager.est_connecte():   # avec la manette, c'est le gyroscope qui gère le haut/bas
+			pitch = clamp(pitch - event.relative.y * mouse_sensitivity, deg_to_rad(-89), deg_to_rad(89))
+			head.rotation.x = pitch
 	elif event is InputEventKey and event.is_action_pressed("ui_cancel"):
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 
@@ -80,14 +91,47 @@ func _physics_process(delta: float) -> void:
 	velocity.x = direction.x * vitesse
 	velocity.z = direction.z * vitesse
 
-	# regard au gyroscope (comme un joystick : plus on incline, plus ça tourne vite)
+			# regard au gyroscope, par rapport à la position de repos mémorisée
 	if arduino:
 		var tilt := ArduinoManager.tilt
-		var tourne := _zone_morte(tilt.x, ZONE_MORTE_TILT)
-		var regarde := _zone_morte(tilt.y, ZONE_MORTE_TILT)
-		rotate_y(-tourne * VITESSE_TILT * delta)      # si ça tourne à l'envers : enlève le "-"
-		pitch = clamp(pitch - regarde * VITESSE_TILT * delta, deg_to_rad(-89), deg_to_rad(89))
-		head.rotation.x = pitch                       # si haut/bas inversé : "+" au lieu de "-"
+		_temps_connecte += delta
+		# touche C : relance la calibration (garder la manette immobile 1,5 s après l'avoir relâchée)
+		if Input.is_key_pressed(KEY_C):
+			_tilt_calibre = false
+			_temps_connecte = 0.0
+			_somme_gyro = 0.0
+			_nb_gyro = 0
+		if not _tilt_calibre:
+			# entre 0,5 s et 1,5 s : moyenne du gyroscope au repos (son biais)
+			if _temps_connecte > 0.5:
+				_somme_gyro += ArduinoManager.gyro_z
+				_nb_gyro += 1
+			if _temps_connecte > 1.5 and _nb_gyro > 0:
+				_gyro_biais = _somme_gyro / _nb_gyro
+				_tilt_neutre = tilt
+				_tilt_calibre = true
+				print("[Manette] Calibrée : biais gyroscope = ", snappedf(_gyro_biais, 0.1), " °/s")
+		else:
+			var t := tilt - _tilt_neutre
+			# gauche/droite : on pivote la manette à plat, le gyroscope mesure la vitesse de rotation
+			var vitesse_z := ArduinoManager.gyro_z - _gyro_biais
+			if absf(vitesse_z) < 3.0:
+				# manette immobile : on suit très doucement la dérive du gyroscope
+				_gyro_biais = lerpf(_gyro_biais, ArduinoManager.gyro_z, 0.005)
+			if absf(vitesse_z) > 4.0:   # zone morte en °/s : ignore les tremblements
+				rotate_y(deg_to_rad(vitesse_z) * GAIN_YAW * delta)   # pivot à droite (valeur positive) = tourner à droite
+			if Engine.get_physics_frames() % 30 == 0:   # diagnostic temporaire, deux fois par seconde
+				print("gyr=", snappedf(ArduinoManager.gyro_z, 0.1), "  biais=", snappedf(_gyro_biais, 0.1), "  vitesse=", snappedf(vitesse_z, 0.1))
+			# haut/bas : l'angle de la manette donne directement l'angle du regard
+			var angle_pitch := t.x if PITCH_SUR_X else t.y
+			var cible := clampf(deg_to_rad(-angle_pitch) * GAIN_PITCH, deg_to_rad(-89), deg_to_rad(89))   # si inversé : enlève le "-" devant angle_pitch
+			pitch = lerpf(pitch, cible, 0.3)   # lissage : supprime les à-coups
+			head.rotation.x = pitch
+	else:
+		_tilt_calibre = false
+		_temps_connecte = 0.0
+		_somme_gyro = 0.0
+		_nb_gyro = 0
 
 	# gravité et saut
 	if not is_on_floor():
@@ -95,7 +139,7 @@ func _physics_process(delta: float) -> void:
 	elif Input.is_action_pressed("jump"):
 		velocity.y = jump_velocity
 
-			# extincteur : touche spray, ou gâchette (potentiomètre) de la manette
+	# extincteur : touche spray, ou gâchette (potentiomètre) de la manette
 	var intensite := 1.0
 	if arduino:
 		_pot_lisse = lerpf(_pot_lisse, ArduinoManager.pot_value, 0.3)   # lissage du bruit

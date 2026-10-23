@@ -46,6 +46,7 @@ var button_pressed: bool = false
 var joystick := Vector2.ZERO
 var pot_value: float = 0.0
 var tilt := Vector2.ZERO        # x = roll, y = pitch, en degrés
+var gyro_z: float = 0.0         # vitesse de rotation horizontale, en degrés par seconde
 var _last_servo: int = -1
 var _debug: bool = OS.get_environment("ARDUINO_DEBUG") == "1"  # ARDUINO_DEBUG=1 : affiche le détail du pairing
 
@@ -228,6 +229,8 @@ func _parse_message(msg: String) -> void:
 			var rp := value.split(",")
 			if rp.size() == 2:
 				tilt = Vector2(rp[0].to_float(), rp[1].to_float())
+		"gyr":
+			gyro_z = value.to_float()
 
 		"pong":
 			print("[Arduino] Latence mesurée : ", Time.get_ticks_msec() - parts[1].to_int(), " ms")
