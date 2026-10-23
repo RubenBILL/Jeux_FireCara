@@ -3,7 +3,9 @@
 # (simulateur_arduino.py --tcp 5555) par TCP local, avec les mêmes fonctions que GdSerial.
 # Utilisé automatiquement par arduino_manager.gd quand ARDUINO_PORT commence par "tcp://".
 # Pourquoi : sur macOS, GdSerial ne sait pas ouvrir un pseudo-terminal (erreur "Not a typewriter"),
-# donc un faux port série ne marche pas. Ce fichier ne sert à rien avec une vraie carte.
+# donc un faux port série ne marche pas.
+# Sert aussi avec la VRAIE carte via le relais outils/relais_arduino.py, quand GdSerial
+# ne reçoit rien sur macOS : le relais lit la carte et transmet les octets ici.
 class_name SerialTcpSimu
 extends RefCounted
 
@@ -68,3 +70,25 @@ func read_string(taille: int) -> String:
 	if res[0] != OK:
 		return ""
 	return (res[1] as PackedByteArray).get_string_from_utf8()
+
+# ── Ajouts pour rester compatible avec arduino_manager.gd ──
+
+# Réglages du port série : sans objet en TCP, présents pour rester compatible avec GdSerial
+func set_data_bits(_n: int) -> void:
+	pass
+
+func set_parity(_p) -> void:
+	pass
+
+func set_stop_bits(_n: int) -> void:
+	pass
+
+func set_flow_control(_f: int) -> void:
+	pass
+
+# Lecture en octets bruts (utilisée par arduino_manager.gd, plus robuste que read_string)
+func read(taille: int) -> PackedByteArray:
+	var res: Array = _peer.get_data(taille)
+	if res[0] != OK:
+		return PackedByteArray()
+	return res[1]
