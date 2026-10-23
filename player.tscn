@@ -3,6 +3,8 @@
 [ext_resource type="Script" uid="uid://dd73red4nrx77" path="res://player.gd" id="1_4flbx"]
 [ext_resource type="PackedScene" path="res://Poudre.tscn" id="2_i3pqv"]
 [ext_resource type="PackedScene" uid="uid://csq78dkd2bheu" path="res://extincteur/Fire Extinguisher by dook - LtrzDvRya9.glb" id="2_onrkg"]
+[ext_resource type="Script" uid="uid://bup1df1iaxv7m" path="res://jet_poudre.gd" id="4_hqtel"]
+[ext_resource type="PackedScene" uid="uid://b50opj7kfwhvq" path="res://assets/Low Poly Characters Bundle-glb/Cowgirl.glb" id="5_sweqy"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_4ptq1"]
 radius = 0.3
@@ -12,6 +14,9 @@ height = 1.7
 radius = 0.3
 height = 1.7
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_4ptq1"]
+size = Vector3(1.4, 2.4, 7)
+
 [node name="Player" type="CharacterBody3D" unique_id=554535433]
 script = ExtResource("1_4flbx")
 
@@ -19,6 +24,7 @@ script = ExtResource("1_4flbx")
 shape = SubResource("CapsuleShape3D_4ptq1")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=9403960]
+visible = false
 mesh = SubResource("CapsuleMesh_4ptq1")
 
 [node name="Head" type="Node3D" parent="." unique_id=527671526]
@@ -42,6 +48,15 @@ event_name = "event:/extinct"
 event_guid = "{7658f002-e4e2-4ff9-8738-3dfadfa68eef}"
 volume = 0.09
 
+[node name="ZoneJet" type="Area3D" parent="Head/Camera3D" unique_id=292034411]
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("4_hqtel")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Head/Camera3D/ZoneJet" unique_id=1663873810]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, -3.5)
+shape = SubResource("BoxShape3D_4ptq1")
+
 [node name="FmodEventEmitter3D" type="FmodEventEmitter3D" parent="." unique_id=850325404]
 event_name = "event:/footsteps"
 event_guid = "{2f0bc5d1-6620-48d5-a360-e9841fb939de}"
@@ -50,3 +65,6 @@ fmod_parameters/pas/id = 1937817998102140828
 fmod_parameters/pas = "plancher"
 fmod_parameters/pas/labels = PackedStringArray("plancher", "herbeMarche", "herbeCours")
 fmod_parameters/pas/variant_type = 4
+
+[node name="Skin" parent="." unique_id=1214689590 instance=ExtResource("5_sweqy")]
+transform = Transform3D(-105, 0, -1.5854559e-05, 0, 105, 0, 1.5854559e-05, 0, -105, 0, -0.84, 0.6)

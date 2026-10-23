@@ -2,7 +2,7 @@
 
 [ext_resource type="ArrayMesh" path="res://map_foret_relief/terrain_mesh.res" id="terrain_mesh"]
 [ext_resource type="Shape3D" path="res://map_foret_relief/terrain_shape.res" id="terrain_shape"]
-[ext_resource type="Material" path="res://Texture_herbe/Ground068_1K-JPG.tres" id="mat_sol"]
+[ext_resource type="Material" uid="uid://di2wvqwxea14f" path="res://assets/Texture_herbe/Ground068_1K-JPG.tres" id="mat_sol"]
 
 [sub_resource type="StandardMaterial3D" id="mat_roche1"]
 albedo_color = Color(0.36, 0.33, 0.3, 1)

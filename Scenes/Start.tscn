@@ -1,6 +1,9 @@
 [gd_scene format=3 uid="uid://br46gtwnnou4l"]
 
 [ext_resource type="Script" uid="uid://dd3m42c4741s4" path="res://Scripts/start_screen.gd" id="1_og4jd"]
+[ext_resource type="VideoStream" uid="uid://du4kxr6wl3wfl" path="res://ecran_titre.ogv" id="2_nt0jr"]
+[ext_resource type="PackedScene" uid="uid://b50opj7kfwhvq" path="res://assets/Low Poly Characters Bundle-glb/Cowgirl.glb" id="3_1lxxj"]
+[ext_resource type="Script" uid="uid://bnpf256mb2hca" path="res://musique.gd" id="3_y4ycm"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_og4jd"]
 corner_radius_top_left = 50
@@ -14,8 +17,44 @@ script = ExtResource("1_og4jd")
 [node name="Control" type="CanvasLayer" parent="." unique_id=714779241]
 
 [node name="Background" type="ColorRect" parent="Control" unique_id=1639288048]
+visible = false
 offset_right = 1917.0
 offset_bottom = 1079.0
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="Control" unique_id=2014776603]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+stream = ExtResource("2_nt0jr")
+autoplay = true
+expand = true
+loop = true
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="Control" unique_id=37474250]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+stretch = true
+
+[node name="SubViewport" type="SubViewport" parent="Control/SubViewportContainer" unique_id=517411853]
+transparent_bg = true
+handle_input_locally = false
+size = Vector2i(1920, 1080)
+render_target_update_mode = 4
+
+[node name="Root Scene" parent="Control/SubViewportContainer/SubViewport" unique_id=1214689590 instance=ExtResource("3_1lxxj")]
+transform = Transform3D(-2.1855694e-06, 0, 50, 0, 50, 0, -50, 0, -2.1855694e-06, -1.3, -0.9, 0)
+
+[node name="Camera3D" type="Camera3D" parent="Control/SubViewportContainer/SubViewport" unique_id=1238940845]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 3)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="Control/SubViewportContainer/SubViewport" unique_id=1733138218]
+transform = Transform3D(0.8660254, 0.3213938, -0.38302222, 0, 0.76604444, 0.6427876, 0.5, -0.55667037, 0.66341394, 0, 0, 0)
 
 [node name="FadeOverlay" type="ColorRect" parent="Control" unique_id=1284048180]
 unique_name_in_owner = true
@@ -52,8 +91,9 @@ theme_override_constants/separation = 20
 [node name="StatusLabel" type="Label" parent="Control/VBoxContainer/HBoxContainer" unique_id=22544246]
 unique_name_in_owner = true
 layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 79
+theme_override_colors/font_color = Color(1, 0.94509804, 0.8627451, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 65
 text = "Arduino State : "
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -67,7 +107,23 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_og4jd")
 [node name="StartButton" type="Button" parent="Control/VBoxContainer" unique_id=1252999707]
 unique_name_in_owner = true
 layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.94509804, 0.8627451, 1)
 theme_override_font_sizes/font_size = 128
 text = " Start Game "
+
+[node name="FmodBankLoader" type="FmodBankLoader" parent="." unique_id=943302567]
+bank_paths = ["res://FMOD Banks/Desktop/Master.strings.bank", "res://FMOD Banks/Desktop/Master.bank"]
+
+[node name="Musique" type="FmodEventEmitter3D" parent="." unique_id=1868341996]
+event_name = "event:/musique"
+event_guid = "{513bb764-ee57-4367-9718-382a55983e02}"
+autoplay = true
+volume = 0.9
+fmod_parameters/etatMusique/id = 5950344720888052481
+fmod_parameters/etatMusique = "sonChill"
+fmod_parameters/etatMusique/labels = PackedStringArray("sonChill", "sonTransition", "sonPeur")
+fmod_parameters/etatMusique/variant_type = 4
+transform = Transform3D(-0.9954014, 0, 0.09579287, 0, 1, 0, -0.09579287, 0, -0.9954014, -144.07588, 19.995014, 122.83098)
+script = ExtResource("3_y4ycm")
 
 [connection signal="pressed" from="Control/VBoxContainer/StartButton" to="." method="_on_start_button_pressed"]

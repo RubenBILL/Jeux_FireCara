@@ -2,8 +2,8 @@
 
 [ext_resource type="PackedScene" uid="uid://btqmtw8fbyabk" path="res://player.tscn" id="1_ftqr2"]
 [ext_resource type="PackedScene" path="res://map_foret_carre.tscn" id="2_y0kl3"]
-[ext_resource type="Material" uid="uid://di2wvqwxea14f" path="res://Texture_herbe/Ground068_1K-JPG.tres" id="3_bbbsb"]
-[ext_resource type="ArrayMesh" uid="uid://6qbvvmegy8b6" path="res://Stylized Nature MegaKit[Standard]/OBJ/Grass_Wispy_Short.obj" id="3_y0kl3"]
+[ext_resource type="Material" uid="uid://di2wvqwxea14f" path="res://assets/Texture_herbe/Ground068_1K-JPG.tres" id="3_bbbsb"]
+[ext_resource type="ArrayMesh" uid="uid://6qbvvmegy8b6" path="res://assets/Stylized Nature MegaKit[Standard]/OBJ/Grass_Wispy_Short.obj" id="3_y0kl3"]
 [ext_resource type="PackedScene" uid="uid://dgwu6kk04qwna" path="res://glTF/CommonTree_1.gltf" id="4_0l6ap"]
 [ext_resource type="Texture2D" uid="uid://c8r4shqr76ejr" path="res://glTF/Bark_NormalTree.png" id="5_bbbsb"]
 [ext_resource type="Texture2D" uid="uid://fryfaocdlisv" path="res://glTF/Bark_NormalTree_Normal.png" id="6_x48kh"]
